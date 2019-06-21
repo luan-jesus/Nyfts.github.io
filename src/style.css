@@ -15,6 +15,11 @@ section{
     z-index: 10;
 }
 
+section p{
+    text-indent: 35px;
+    font-size: 14px;
+}
+
 .content{
     position: relative;
     display: flex;
@@ -118,13 +123,13 @@ CAROUSEL
 */
 .carousel-caption{
     text-align: right;
-    text-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+    text-shadow: 4px 4px 5px rgba(0,0,0,0.6);
     top: 200px;
 }
 
 .carousel{
     height: 600px;
-    z-index: -1;
+    z-index: 0;
 }
 .carousel-indicators{
     top: -35px;
@@ -137,6 +142,10 @@ CAROUSEL
     width: 17px;
     height: 17px;
     border-radius: 50%;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
 }
 /*
 ============================
@@ -180,13 +189,57 @@ SECTION
     
 }
 h1{
-    margin: 0;
+    margin: 0 0 20px;
     padding: 5px;
     font-size: 23px;
     font-weight: 700;
     color: #970000;
     border-bottom: solid 3px rgba(151,0,0,0.7);
 }
+
+/*
+============================
+SECTION contato
+============================
+*/
+.text-container{
+    display: flex; flex-direction: row;
+}
+.text-box{
+    border: none;
+    background-color: #e9e9e9;
+    height: 40px;
+    border-radius: 5px;
+    margin: 10px 0;
+    width: 50%;
+    padding: 10px;
+}
+.text-area{
+    border: none;
+    background-color: #e9e9e9;
+    border-radius: 5px;
+    margin: 10px 0 0;
+    width: 100%;
+    resize: none;
+    padding: 10px;
+}
+.btn-submit{
+    position: relative;
+    border: none;
+    background-color: #970000;
+    border-radius: 5px;
+    color: #fff;
+    margin: 18px 0 0;
+    height: 45px;
+    width: 90px;
+}
+.btn-submit:hover{
+    background-color: #7f0000;
+}
+.btn-submit:active{
+    background-color: #510000;
+}
+
 /*
 ============================
 FOOTER
@@ -196,7 +249,7 @@ FOOTER
     position: relative;
     z-index: 0;
     width: 100%;
-    min-height: 390px;
+    height: 390px;
     background: url(../img/tubeblender.jpg);
     background-size: cover;
 }
@@ -218,9 +271,11 @@ FOOTER
 .footer-item{
     margin-top: 10px;
     width: 100%;
+    padding: 0 30px;
 }
 .footer-item h3{
     text-align: center;
+    text-shadow: 4px 4px 5px rgba(0,0,0,0.4);
     color: #f9f9f9;
     margin: 5px 0 20px;
     font-size: 22px;
@@ -271,12 +326,17 @@ CONTATO
     flex-direction: row;
 }
 .contato-item span{
-    width: 32px;
-    height: 32px;
-    background-color: #fff;
+    width: 24px;
+    height: 24px;
+}
+.contato-item span img{
+    width: 100%;
+    height: 100%;
 }
 .contato-item p{
     color: #f7f7f7;
+    text-shadow: 4px 4px 5px rgba(0,0,0,0.3);
+    font-size: 14px;
     margin-left: 10px;
 }
 
@@ -284,14 +344,26 @@ CONTATO
     color: #f7f7f7;
 }
 .redes-div{
+    width: 160px;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
 }
 .rede-social{
+    box-shadow: 0px 0px 31px -9px rgba(0,0,0,0.75);
     width: 40px;
     height: 40px;
-    background-color: #f7f7f7;
     margin-right: 20px;
+}
+
+.rede-social img{
+    width: 100%;
+    height: 100%;
+    filter: contrast(0%);
+}
+.rede-social:hover img{
+    filter: contrast(100%);
+    transition: .1s filter linear;
 }
 /*
 ============================
@@ -338,5 +410,21 @@ RESPONSIVO
     .footer-content{
         width: 100%;
         flex-direction: column;
+    }
+    .text-container{
+        flex-direction: column;
+    }
+    .text-box{
+        width: 100%;
+    }
+    .footer-information{
+        height: 730px;
+    }
+    .contato-item p{
+        width: 100%;
+        text-align: center;
+    }
+    .contato-item span{
+        display: none;
     }
 }
