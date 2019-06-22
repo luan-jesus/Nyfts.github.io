@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
     <head>
         <title>Mogo</title>
         <meta charset="UTF-8">
@@ -13,9 +13,18 @@
         <link rel="stylesheet" href="src/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="src/normalize.css">
         <link rel="stylesheet" type="text/css" href="src/style.css">
+        <script>
+            if (window.pageYOffset != 0){
+                //console.log('ta fora do top');
+                $('#nav-bar').css('background-color','rgba(101,153,143,.9)');
+            } else{
+            //console.log('ta no topo');
+                $('#nav-bar').css('background-color','rgba(0,0,0,0)');
+            }
+        </script>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <nav id="nav-bar" class="navbar navbar-expand-lg navbar-dark fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="#">MoGo</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
@@ -100,11 +109,84 @@
             <hr>
             <div class="container">
                 <div class="service-list">
-                    
+                    <div class="services-row">
+                        <div class="sevice-item">
+                            <span><img src="img/alarm.png"></span>
+                            <div>
+                                <h6>PHOTOGRAPHY</h6>
+                                <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                            </div>
+                        </div>
+                        <div class="sevice-item">
+                            <span><img src="img/linegraph.png"></span>
+                            <div>
+                                <h6>WEB DESIGN</h6>
+                                <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                            </div>
+                        </div>
+                        <div class="sevice-item">
+                            <span><img src="img/computer.png"></span>
+                            <div>
+                                <h6>CREATIVITY</h6>
+                                <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="services-row">
+                        <div class="sevice-item">
+                            <span><img src="img/book.png"></span>
+                            <div>
+                                <h6>SEO</h6>
+                                <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                            </div>
+                        </div>
+                        <div class="sevice-item">
+                            <span><img src="img/home.png"></span>
+                            <div>
+                                <h6>CSS/HTML</h6>
+                                <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                            </div>
+                        </div>
+                        <div class="sevice-item">
+                            <span><img src="img/home.png"></span>
+                            <div>
+                                <h6>DIGITAL</h6>
+                                <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
         
+        <section class="design">
+            <h3 class="kaushan">For all devices</h3>
+            <h3>UNIQUE DESIGN</h3>
+            <hr>
+            <div><img src="img/tablet.png"></div>
+            <div class="container"><img src="img/smartphone.png"></div>
+        </section>
+        
+        <section class="whatwedo">
+            <div class="container">
+                <h3 class="kaushan">Service</h3>
+                <h3>WHAT WE DO</h3>
+                <hr>
+                <p class="text-center text-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+
+                <div class="works">
+                    <div class="work-picture"><img src="img/pic4.png"></div>
+                    <div class="work-list"></div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="comments">
+            <div class="container">
+                
+            </div>
+        </section>
         
         <script src="src/main.js"></script>
     </body>
