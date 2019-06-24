@@ -344,9 +344,39 @@ SECTION works
     height: 330px;
     margin-left: 20px;
     width: 50%;
-    border: 1px solid #000;
+}
+.card{
+    border-radius: 0;
+    margin: 0 0 10px 0;
+}
+.card-header{
+    background-color: #fff;
+    border-radius: 0;
 }
 
+.card-body{
+    overflow-y: auto;
+    height: 93px;
+    color: #999999;
+    font-size: 14px;
+}
+.btn-link{
+    width: 100%;
+    color: #000;
+    text-align: left;
+    font-weight: 500;
+}
+.btn-link:visited{
+    text-decoration: none;
+}
+.btn-link:hover{
+    color: #000;
+    text-decoration: underline;
+}
+
+button img{
+    margin-right: 20px;
+}
 /*
 ==================================
 SECTION comments
@@ -359,14 +389,79 @@ SECTION comments
     padding: 50px 0;
 }
 
+.comments-container{
+    display: flex;
+    flex-direction: row;
+    padding: 0 130px;
+    height: 143.5px;
+}
+
+.comments-container img{
+    width: 115px;
+    height: 115px;
+    padding: 25px;
+    border: 2px solid #95e1d3;
+}
+
+.comments-content{
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+}
+
+.comments-content p{
+    font-size: 18px;
+}
+
+.comments-content-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.comments-content-row hr{
+    margin: 9.75px 10px 0 0;
+    border: 0;
+    height: 3px;
+    width: 40px;
+    background-color: #f38181;
+}
+
+.comments-content-row h3{
+    margin: 0;
+    padding: 0;
+    font-weight: 100;
+}
+
+.carousel-control-next-icon{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23cfcfcf' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3e%3c/svg%3e");
+}
+.carousel-control-prev-icon{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23cfcfcf' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3e%3c/svg%3e");
+}
+
 
 
 
 @media only screen and (max-width: 992px) {
-    
+    .comments-content{
+        padding: 0 10px;
+    }
+    .comments-container{
+        padding: 0;
+    }
+    .comments-content-row h3{
+        font-size: 4vw;
+    }
+    .comments-content p{
+        font-size: 3vw;
+    }
+    .carousel-control-next, .carousel-control-prev{
+        width: 5%;
+    }
     .x-header-content h1{
         font-size: 6.5vh;
     }
+    
     .x-header-content h2{
         font-size: 4.5vh;
     }
@@ -421,6 +516,10 @@ SECTION comments
     .work-list{
         margin: 20px 0 0;
         width: 100%;
+    }
+    .design div img{
+        width: 60%;
+        margin-left: 40px;
     }
 }
 
