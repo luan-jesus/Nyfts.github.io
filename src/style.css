@@ -191,30 +191,87 @@ SECTION about
 ==================================
 */
 
-.pictures{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    margin: 90px 0;
-}
+.row{margin: 80px 15px;}
 
-.pic-item{
-    margin: 10px 30px;
-    position: relative;
+.item-gradient div{
+    width:32px;
+    margin: 0 auto 6px;
 }
-
-.pic-item img{
+.item-gradient h5{
+    font-weight: 700;
+    font-size: 15px;
+}
+.item-gradient div img{
     width: 100%;
     height: auto;
+}
+
+.col{
+    position: relative;
+    padding: 0;
+    margin: 10px 1.5%;
+
+}
+
+.item-bg{
+    
+    background-color: #95e1d3;
+}
+
+.item-pic{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    transition: .15s all linear;
+}
+.invisibe-hover{
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+    left: 0;
 }
 
 .pic-one{
-    position: absolute;
-    left: -10px;
-    top: -10px;
+    background: url(../img/pic1.png) center no-repeat;
+    background-size: cover;
+}
+.pic-two{
+    background: url(../img/pic2.png) center no-repeat;
+    background-size: cover;
+}
+.pic-three{
+    background: url(../img/pic3.png) center no-repeat;
+    background-size: cover;
+}
+
+.item-gradient{
     width: 100%;
-    height: auto;
-    z-index: 2;
+    position: relative;
+    height: 100%;
+    padding: 90px 0;
+    opacity: 0;
+    top: 0px;
+    left: 0px;
+    background: rgba(243,129,129,0.9);
+    background: -moz-linear-gradient(top, rgba(243,129,129,0.9) 0%, rgba(252,227,138,0.9) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(243,129,129,0.9)), color-stop(100%, rgba(252,227,138,0.9)));
+    background: -webkit-linear-gradient(top, rgba(243,129,129,0.9) 0%, rgba(252,227,138,0.9) 100%);
+    background: -o-linear-gradient(top, rgba(243,129,129,0.9) 0%, rgba(252,227,138,0.9) 100%);
+    background: -ms-linear-gradient(top, rgba(243,129,129,0.9) 0%, rgba(252,227,138,0.9) 100%);
+    background: linear-gradient(to bottom, rgba(243,129,129,0.9) 0%, rgba(252,227,138,0.9) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f38181', endColorstr='#fce38a', GradientType=0 );
+transition: .15s all linear;
+}
+
+.invisibe-hover:hover + .item-pic .item-gradient{
+    opacity: 1;
+}
+
+.invisibe-hover:hover + .item-pic{
+    top: -8px;
+    left: -8px;
 }
 
 /*
@@ -520,6 +577,9 @@ SECTION comments
     .design div img{
         width: 60%;
         margin-left: 40px;
+    }
+    .row{
+        flex-direction: column;
     }
 }
 
