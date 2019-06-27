@@ -224,14 +224,6 @@ SECTION about
     left: 0px;
     transition: .15s all linear;
 }
-.invisibe-hover{
-    position:absolute;
-    height: 100%;
-    width: 100%;
-    z-index: 10;
-    top: 0;
-    left: 0;
-}
 
 .pic-one{
     background: url(../img/pic1.png) center no-repeat;
@@ -265,11 +257,20 @@ SECTION about
 transition: .15s all linear;
 }
 
-.invisibe-hover:hover + .item-pic .item-gradient{
+.item-pic:hover .item-gradient{
     opacity: 1;
 }
 
-.invisibe-hover:hover + .item-pic{
+.item-bg:hover .item-pic .item-gradient{
+    opacity: 1;
+}
+
+.item-bg:hover .item-pic{
+    top: -8px;
+    left: -8px;
+}
+
+.item-pic:hover{
     top: -8px;
     left: -8px;
 }
@@ -284,7 +285,7 @@ SECTION jobs
     background-color: #95e1d3;
 }
 
-.jobs .container{
+.jobs .container, .logos .container{
     display: flex;
     flex-direction: row;
 }
@@ -498,6 +499,103 @@ SECTION comments
 
 
 
+/*
+==================================
+SECTION team
+==================================
+*/
+
+
+.item-gradient ul{
+    list-style: none;
+    display: inline-flex;
+    width: 100%;
+    margin: 72.5px auto;
+    padding-inline-start: 0;
+    item-align: center;
+}
+
+.item-gradient ul li{
+    background-color: #FCE38A;
+    margin-left: 1px;
+    transition: background-color .1s linear;
+
+}
+
+.item-gradient ul li:hover{
+    background-color: #F38181;
+    margin-left: 0px;
+    padding-left: 1px;
+}
+
+.item-gradient ul li:hover a img{
+    filter: contrast(0%);
+    filter: brightness(200%);
+}
+
+
+.item-gradient ul li a img{
+    padding: 12px;
+    transition: all .1s linear;
+}
+
+.pic-five{
+    background: url(../img/pic-5.png) center no-repeat;
+    background-size: cover;
+}
+
+.item-gradient span{
+    display: block;
+    width: 204px;
+    margin: 0 auto;
+}
+
+.col h5{
+    margin-top: 30px;
+    font-size: 13px;
+    text-align: center;
+    color: #000;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.col h6{
+    font-size: 11px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #999;
+}
+
+
+/*
+==================================
+SECTION logos
+==================================
+*/
+
+
+
+.logos{
+    background-color: #f8f8f8;
+    padding: 50px 0;
+}
+
+.logos .jobs-item{
+    width: 20%;
+    padding: 0;
+}
+
+.jobs-item div{
+    width: 75px;
+    margin: 0 auto;
+}
+
+.jobs-item div img{
+    width: 100%;
+}
+
+
+
 
 @media only screen and (max-width: 992px) {
     .comments-content{
@@ -580,6 +678,10 @@ SECTION comments
     }
     .row{
         flex-direction: column;
+    }
+    .jobs-item div{
+    width: 100%;
+    padding: 0 5px;
     }
 }
 
