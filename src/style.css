@@ -550,7 +550,7 @@ SECTION team
     margin: 0 auto;
 }
 
-.col h5{
+.team .container .row .col h5{
     margin-top: 30px;
     font-size: 13px;
     text-align: center;
@@ -559,7 +559,7 @@ SECTION team
     font-family: 'Montserrat', sans-serif;
 }
 
-.col h6{
+.team .container .row .col h6{
     font-size: 11px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
