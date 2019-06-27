@@ -191,7 +191,7 @@ SECTION about
 ==================================
 */
 
-.row{margin: 80px 15px;}
+.row{margin: 70px 15px;}
 
 .item-gradient div{
     width:32px;
@@ -546,6 +546,16 @@ SECTION team
     background-size: cover;
 }
 
+.pic-six{
+    background: url(../img/pic-6.png) center no-repeat;
+    background-size: cover;
+}
+
+.pic-seven{
+    background: url(../img/pic-7.png) center no-repeat;
+    background-size: cover;
+}
+
 .item-gradient span{
     display: block;
     width: 204px;
@@ -585,10 +595,11 @@ SECTION logos
 .logos .jobs-item{
     width: 20%;
     padding: 0;
+    opacity: 0.8;
 }
 
 .jobs-item div{
-    width: 75px;
+    width: 90px;
     margin: 0 auto;
 }
 
