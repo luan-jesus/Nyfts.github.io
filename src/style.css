@@ -244,6 +244,7 @@ SECTION about
     height: 100%;
     padding: 90px 0;
     opacity: 0;
+    visibility: hidden;
     top: 0px;
     left: 0px;
     background: rgba(243,129,129,0.9);
@@ -263,6 +264,7 @@ transition: .15s all linear;
 
 .item-bg:hover .item-pic .item-gradient{
     opacity: 1;
+    visibility: visible;
 }
 
 .item-bg:hover .item-pic{
@@ -680,8 +682,8 @@ SECTION logos
         flex-direction: column;
     }
     .jobs-item div{
-    width: 100%;
-    padding: 0 5px;
+        width: 100%;
+        padding: 0 5px;
     }
 }
 
