@@ -3,6 +3,10 @@ body{
     overflow-x: hidden;
 }
 
+section{
+    position: relative;
+}
+
 /*
 ==================================
 NAVBAR
@@ -40,6 +44,14 @@ NAVBAR
 .navbar-dark .navbar-nav .nav-link:hover{
     color: #fce38a;
     border-bottom: 2px solid;
+}
+
+.abosolute-top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
 }
 /*
 ==================================
@@ -175,7 +187,7 @@ p{
 }
 
 .text-description{
-    padding: 0 110px;
+    padding: 0 110px 60px;
 }
 
 hr{
@@ -191,7 +203,7 @@ SECTION about
 ==================================
 */
 
-.row{margin: 70px 15px;}
+.row{margin: 0 15px 70px;}
 
 .item-gradient div{
     width:32px;
@@ -354,6 +366,19 @@ SECTION design
     background-size: cover;
 }
 
+.white-glass{
+    position: absolute;
+    width: 100% !important;
+    height: 100%;
+    background: rgba(255,255,255,0.85);
+    z-index: 0;
+}
+
+.index{
+    z-index: 1;
+    position: relative;
+}
+
 .design div{
     width: 350px;
     margin: 0 auto;
@@ -384,7 +409,6 @@ SECTION works
 */
 
 .works{
-    margin-top: 70px;
     margin-bottom: 70px;
     width: 100%;
     display: flex;
@@ -514,7 +538,6 @@ SECTION team
     width: 100%;
     margin: 72.5px auto;
     padding-inline-start: 0;
-    item-align: center;
 }
 
 .item-gradient ul li{
@@ -607,6 +630,164 @@ SECTION logos
     width: 100%;
 }
 
+/*
+==================================
+SECTION portfolio
+==================================
+*/
+
+.portfolio{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.portfolio-item{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.portfolio-img img{
+    width: 100%;
+    height: auto;
+    
+}
+
+.portfolio-img{
+    position: relative;
+}
+.profile-pic{
+    border: 0 !important;
+    padding: 0 !important;
+    height: 100% !important;
+    width: auto !important;
+}
+
+.portfolio-gradient{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    opacity: 0;
+    transition: .1s all linear;
+    flex-direction: row;
+    align-items: center;
+    user-select: none;
+    z-index: 30;
+    top: 0;
+    left: 0;
+    background: rgba(243,129,129,0.9);
+    background: -moz-linear-gradient(top, rgba(243,129,129,0.9) 0%, rgba(252,227,138,0.9) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(243,129,129,0.9)), color-stop(100%, rgba(252,227,138,0.9)));
+    background: -webkit-linear-gradient(top, rgba(243,129,129,0.9) 0%, rgba(252,227,138,0.9) 100%);
+    background: -o-linear-gradient(top, rgba(243,129,129,0.9) 0%, rgba(252,227,138,0.9) 100%);
+    background: -ms-linear-gradient(top, rgba(243,129,129,0.9) 0%, rgba(252,227,138,0.9) 100%);
+    background: linear-gradient(to bottom, rgba(243,129,129,0.9) 0%, rgba(252,227,138,0.9) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f38181', endColorstr='#fce38a', GradientType=0 );
+}
+
+.portfolio-gradient:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+.portfolio-vtnc{
+    height: 97px;
+    margin: 0 auto;
+}
+
+
+.img-canvas{
+    width: 32px;
+    margin: 0 auto 10px;
+
+}
+
+.img-canvas img{
+    width: 100%;
+    height: auto;
+    padding: 3px;
+    filter: contrast(0%);
+    filter: brightness(200%);
+}
+
+
+.portfolio-gradient div h5{
+    top: 0;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.portfolio-gradient div h6{
+    color: #fff;
+    font-weight: 100;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+/*
+==================================
+SECTION feedback
+==================================
+*/
+
+.feedback{
+    background: url(../img/feedback-bg.png) center no-repeat;
+    background-size: cover;
+}
+
+.feedback-outer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 50px;
+    padding-bottom: 50px;
+}
+
+.people{
+    flex: 1 50%;
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+}
+
+.people img{
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.people-content h5{
+    text-align: left;
+    color: #000;
+    font-weight: 600;
+}
+
+.people-content h6{
+    text-align: left;
+    color: #000;
+    font-weight: 100;
+}
+
+.people-content hr{
+    margin: 10px 0;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -640,7 +821,7 @@ SECTION logos
         margin: 0 5px;
     }
     .text-description{
-        padding: 0 10px;
+        padding: 0 10px 30px;
     }
     .kaushan{
         padding: 60px 0 15px;
@@ -695,6 +876,35 @@ SECTION logos
     .jobs-item div{
         width: 100%;
         padding: 0 5px;
+    }
+    .portfolio-item{
+        flex: 1 50%;
+    }
+    .portfolio-img{
+        height: auto;
+    }    
+    #portfolio-5{
+        height: 300px;
+    }
+    .people{
+        flex: 1;
+        padding: 10px;
+    }
+    .feedback-outer{
+        padding: 0;
+        padding-bottom: 50px;
+    }
+    .people-content h5{
+        font-size: .8em;
+    }
+    .people-content h6{
+        font-size: .7em;
+    }
+    .img-canvas{
+        width: 24px;
+    }
+    .portfolio-gradient div h5, .portfolio-gradient div h6{
+        font-size: .7em;
     }
 }
 
