@@ -781,6 +781,166 @@ SECTION feedback
 }
 
 
+/*
+==================================
+SECTION blog
+==================================
+*/
+
+
+.blog-item{
+    flex: 1 1 24%;
+    margin: 15px 1.5%;
+}
+
+.blog-pic{
+    width: 100%;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.blog-pic img{
+    width: 100%;
+    height: auto;
+}
+
+.date{
+    position: absolute;
+    background-color: #95e1d3;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+    bottom: 10px;
+    left: -10px;
+}
+
+.day{
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    font-size: 24px;
+} 
+
+.month{
+    text-align: center;
+    color: #fff;
+    font-weight: 100;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.blog-item a:hover{
+    text-decoration: none;
+}
+
+.blog-item a:hover h7{
+    text-decoration: underline;
+}
+
+.blog-item a:hover p{
+    text-decoration: underline;
+}
+
+.blog-item a p{
+    font-size: .75em;
+    margin: 0;
+}
+
+.blog-item a h7{
+    font-weight: 600;
+    font-size: .8em;
+    margin: 5px 0;
+    line-height: 2em;
+    color: #000;
+}
+
+.blog-item a hr{
+    width: 100%;
+    margin: 16px 0;
+    border-top: 1px solid #e5e5e5;
+}
+
+.blog-item-statistics{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.blog-item-statistics img{
+    height: 14px;
+    width: auto;
+}
+
+.blog-item-stats{
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 100;
+    margin-right: 10px;
+    color: #95e1d3;
+    margin-left: 5px;
+    text-decoration: none !important;
+}
+
+
+/*
+==================================
+SECTION map
+==================================
+*/
+
+
+#mapa{
+    height: 250px;
+    width: 100%;
+    margin: 0;
+    z-index: 0;
+}
+
+.map-sec{
+    user-select: none;
+}
+
+#open-map:hover{
+    cursor: pointer;
+}
+
+
+.map-sec .white-glass{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 200;
+    top: 0;
+    left: 0;
+}
+
+.pinico{
+    width: 20px;
+    margin: 0 auto;
+}
+
+.pinico img{
+    width: 100%;
+    height: auto;
+}
+
+.map-items hr{
+    border-top: 2.5px solid #f38181;
+    margin: 0 auto;
+}
+
+.map-items h3{
+    color: #f38181;
+    font-size: 1.3em;
+    margin: 18px;
+}
+
+.map-items{
+    margin: 0 auto;
+}
 
 
 
@@ -790,8 +950,43 @@ SECTION feedback
 
 
 
+
+
+/*
+==================================
+FOOTER
+==================================
+*/
+
+footer{
+    text-align: center;
+    font-size: .7em;
+    padding: 20px 0;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff;
+    border-top: 1px solid rgba(229,229,229,0.6);
+}
+
+footer a{
+    color: #f4a4a4;
+}
+
+footer a:hover{
+    color: #c88b8b;
+    text-decoration: none;
+}
+
+/*
+==================================
+MEDIA QUERYS
+==================================
+*/
 
 @media only screen and (max-width: 992px) {
+    footer{
+        font-size: .5em;
+    }
     .comments-content{
         padding: 0 10px;
     }
@@ -907,6 +1102,9 @@ SECTION feedback
         font-size: .7em;
     }
 }
+
+
+
 
 @media only screen and (min-height: 1080px) {
     header{
