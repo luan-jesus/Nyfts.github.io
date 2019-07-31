@@ -850,7 +850,7 @@ SECTION blog
 }
 
 .blog-item a h7{
-    font-weight: 600;
+    font-weight: 500;
     font-size: .8em;
     margin: 5px 0;
     line-height: 2em;
@@ -942,13 +942,136 @@ SECTION map
     margin: 0 auto;
 }
 
+/*
+==================================
+SECTION end-page
+==================================
+*/
+
+.end-page{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(250,250,250,1);
+}
+
+.end-page-brief{
+    margin: 60px 10px;
+    width: 40%;
+}
+.end-page-social{
+    margin: 60px 10px;
+    height: 405px;
+    width: 30%;
+}
+
+.ul-socialmedia{
+    list-style: none;
+    margin: 0 0 0 20px;
+    padding: 0;
+    user-select: none;
+    
+}
+
+.row span{
+    font-size: 1em;
+    font-style: italic;
+    margin-right: 10px;
+}
+
+.socialmedialink{
+    margin: 0 4px;
+}
+
+.socialmedialink a img{
+    height: 1.2em;
+    width: auto;
+}
+
+.socialmedialink a:hover img{
+    filter: saturate(0);
+}
+
+.end-page-brief hr{
+    width: 100%;
+    margin: 20px auto;
+    border-top: solid 1px lightgrey;
+}
+
+.end-page-brief h2{
+    color: rgba(190,190,190,1);
+    font-weight: 800;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.end-page container row{
+    flex-direction: row;
+}
+
+.followers{
+    margin: 40px 0 0;
+    font-size: .9em;
+    color: #000;
+}
+
+.followers strong{
+    font-size: 1.1em;
+}
+
+.followus{
+    margin: 0;
+    font-size: .9em;
+    color: rgba(190,190,190,1);
+}
+.brief-text{
+    font-size: .85em;
+    color: rgba(190,190,190,1);
+}
+
+.end-page-brief form{
+    margin-top: 30px;
+}
+
+.end-page-brief form input{
+    height: 2.5em;
+    background-color: #fff;
+    border: 1px solid rgba(200,200,200,1);
+    border-right: none;
+    text-indent: 10px;
+    margin: 0;
+    width: 50%;
+}
+
+.end-page-brief form button{
+    height: 2.5em;
+    margin: 0;
+    border: none;
+    background-color: #95e1d3;
+    color: #fff;
+    width: 30%;
+    font-size: 1em;
+}
+
+.end-page-brief form button:hover{
+    filter: brightness(105%);
+}
+
+.end-page-brief form input::placeholder{
+    color: rgba(190,190,190,1);
+}
 
 
 
+.end-page-social h3{
+    text-align: left;
+    font-size: 1em;
+    font-weight: 600;
+}
 
-
-
-
+.last-blogs{
+    width: 100%;
+    background-color: #000;
+}
 
 
 
@@ -984,6 +1107,18 @@ MEDIA QUERYS
 */
 
 @media only screen and (max-width: 992px) {
+    .end-page-social, .end-page-brief{
+        margin: 30px 0;
+    }
+    .end-page container row{
+        flex-direction: row;
+    }
+    .end-page-instagram, .end-page-blog, .end-page-brief{
+        width: 100%;
+    }
+    .end-page{
+        flex-direction: column;
+    }   
     footer{
         font-size: .5em;
     }
