@@ -942,6 +942,14 @@ SECTION map
     margin: 0 auto;
 }
 
+#btn-closemap{
+    position: absolute;
+    z-index: 1000;
+    top: 10px;
+    left: 100px;
+    opacity: 0;
+}
+
 /*
 ==================================
 SECTION end-page
@@ -955,11 +963,11 @@ SECTION end-page
 }
 
 .end-page-brief{
-    margin: 60px 10px;
+    margin: 60px 15px;
     width: 40%;
 }
 .end-page-social{
-    margin: 60px 10px;
+    margin: 60px 15px;
     height: 405px;
     width: 30%;
 }
@@ -972,7 +980,7 @@ SECTION end-page
     
 }
 
-.row span{
+.follow-us-span{
     font-size: 1em;
     font-style: italic;
     margin-right: 10px;
@@ -1065,15 +1073,51 @@ SECTION end-page
 .end-page-social h3{
     text-align: left;
     font-size: 1em;
+    margin-bottom: 20px;
     font-weight: 600;
 }
 
 .last-blogs{
     width: 100%;
-    background-color: #000;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
 }
 
+.last-blogs-item{
+    height: 33%;
+}
 
+.last-blogs-item a{
+    padding: 14px 10px 14px 0;
+    display: flex;
+    align-items: center;
+}
+
+.last-blogs-item a img{
+    height: 100%;
+    margin-right: 15px;
+    width: 120px;
+}
+
+.last-blog-title{
+    color: #000;
+    text-align: left;
+    font-size: 10.3px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.last-blog-date{
+    text-align: left;
+    font-size: 9.5px;
+    font-style: italic; 
+}
+
+.last-blogs-item:hover .last-blog-title, .last-blogs-item:hover .last-blog-date, .last-blogs-item:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
 
 /*
 ==================================
@@ -1107,6 +1151,13 @@ MEDIA QUERYS
 */
 
 @media only screen and (max-width: 992px) {
+    .end-page-social{
+        height: auto;
+        width: 100%;
+    }
+    #btn-closemap{
+        left: 10px;
+    }
     .end-page-social, .end-page-brief{
         margin: 30px 0;
     }

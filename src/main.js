@@ -82,7 +82,22 @@ $("#open-map").click(function(){
     let abudaba = setInterval(function(){
         $("#open-map").css('display','none');
         clearInterval(abudaba);
+        $("#btn-closemap").animate({
+            opacity: 1
+        },200)
+    },400) 
+});
+
+$("#btn-closemap").click(function(){
+    $("#btn-closemap").animate({
+        opacity: 0
     },400)
-    
+    $("#open-map").css('display','flex');
+    $("#open-map").animate({
+        opacity: 1
+    },400);
+    $("#mapa").animate({
+        height: "250px"
+    },400);
 });
 
