@@ -7,20 +7,43 @@
         <link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&display=swap" rel="stylesheet">
         <link rel="shortcut icon" href="favicon.ico">
-        <link rel="stylesheet" href="src/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="src/normalize.css">
         <link rel="stylesheet" type="text/css" href="src/style.css">
         <script>
-            if (window.pageYOffset != 0){
-                //console.log('ta fora do top');
-                $('#nav-bar').css('background-color','rgba(101,153,143,.9)');
-            } else{
-            //console.log('ta no topo');
-                $('#nav-bar').css('background-color','rgba(0,0,0,0)');
+            
+            /* LOAD ICO ANIM */
+
+            var i = 0
+            var LoadIco = setInterval(function(){
+                i += 5;
+                if (i >= 360){
+                    i = 0;
+                }
+                $("#load-ico").css("transform","rotateZ("+i+"deg)");
+            },10)
+
+
+            /* FUNCTION ON PAGE LOAD */
+
+
+            window.onload = function(){
+                $("#loadscreen").animate({
+                    opacity : 0
+                },1000)
+                let delay = setInterval(function(){
+                    $("#loadscreen").css("display","none");
+                    clearInterval(delay);
+                    clearInterval(LoadIco);
+                },1000)
             }
+
         </script>
     </head>
     <body>
+        <div id="loadscreen">
+            <img id="load-ico" src="img/load-ico.png">
+        </div>
         <nav id="nav-bar" class="navbar navbar-expand-lg navbar-dark abosolute-top">
             <div class="container">
                 <a class="navbar-brand" href="#">MoGo</a>
@@ -30,19 +53,19 @@
                 <div class="collapse navbar-collapse" id="Navbar">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">ABOUT</a>
+                            <a id="nav-link-about" class="nav-link nav-link-active" href="#">ABOUT</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">SERVICE</a>
+                            <a id="nav-link-service" class="nav-link" href="#">SERVICE</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">WORK</a>
+                            <a id="nav-link-work" class="nav-link" href="#">WORK</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">BLOG</a>
+                            <a id="nav-link-blog" class="nav-link" href="#">BLOG</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">CONTACT</a>
+                            <a id="nav-link-contact" class="nav-link" href="#">CONTACT</a>
                         </li>
                     </ul>
                 </div>
@@ -59,11 +82,35 @@
                         <div class="line"></div>
                         <div style="width: 140px; margin: 0 auto;"><button>LEARN MORE</button></div>
                     </div>
+                    <div class="header-nav-menu">
+                        <ul class="header-nav-menu-ul">
+                            <li id="header-menu-intro" style="opacity: 1;">
+                                <div class="white-line"></div>
+                                <h7>01</h7>
+                                <h8>INTRO</h8>
+                            </li>
+                            <li id="header-menu-work">
+                                <div class="white-line"></div>
+                                <h7>02</h7>
+                                <h8>WORK</h8>
+                            </li>
+                            <li id="header-menu-about">
+                                <div class="white-line"></div>
+                                <h7>03</h7>
+                                <h8>ABOUT</h8>
+                            </li>
+                            <li id="header-menu-contact">
+                                <div class="white-line"></div>
+                                <h7>04</h7>
+                                <h8>CONTACTS</h8>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </header>
         
-        <section class="container about">
+        <section id="about" class="container about">
             <h3 class="kaushan">What we do</h3>
             <h3>STORY ABOUT US</h3>
             <hr>
@@ -104,7 +151,7 @@
             </div>
         </section>
         
-        <section class="jobs">
+        <section id="jobs" class="jobs">
             <div class="container">
                 <div class="jobs-item">
                     <h4>42</h4>
@@ -129,7 +176,7 @@
             </div>
         </section>
         
-        <section class="container services">
+        <section id="services" class="container services">
             <h3 class="kaushan">We work with</h3>
             <h3>AMAZING SERVICES</h3>
             <hr>
@@ -379,7 +426,7 @@
             </div>
         </section>
         
-        <section class="portfolio">
+        <section id="work" class="portfolio">
             <div class="container">
                 <h3 class="kaushan">What we do</h3>
                 <h3>SOME OF OUR WORK</h3>
@@ -570,7 +617,7 @@
             </div>
         </section>
         
-        <section class="blog container">
+        <section id="blog" class="blog container">
             <h3 class="kaushan">Our stories</h3>
             <h3>LATEST BLOG</h3>
             <hr>
@@ -644,7 +691,7 @@
             
         </section>
         
-        <section class="map-sec">
+        <section id="contact" class="map-sec">
             <button type="button" class="close" id="btn-closemap" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
@@ -667,14 +714,14 @@
                 <hr>
                 <div class="row followus" style="flex-direction: row;">
                     <span class="follow-us-span">Follow Us:</span>
-                    <div class="socialmedialink"><a href="#"><img src="img/bullseye.png" alt=""></a></div>
-                    <div class="socialmedialink"><a href="#"><img src="img/bullseye.png" alt=""></a></div>
-                    <div class="socialmedialink"><a href="#"><img src="img/bullseye.png" alt=""></a></div>
-                    <div class="socialmedialink"><a href="#"><img src="img/bullseye.png" alt=""></a></div>
-                    <div class="socialmedialink"><a href="#"><img src="img/bullseye.png" alt=""></a></div>
-                    <div class="socialmedialink"><a href="#"><img src="img/bullseye.png" alt=""></a></div>
-                    <div class="socialmedialink"><a href="#"><img src="img/bullseye.png" alt=""></a></div>
-                    <div class="socialmedialink"><a href="#"><img src="img/bullseye.png" alt=""></a></div>
+                    <div class="socialmedialink"><a href="#"><img src="img/facebook-ico.png" alt=""></a></div>
+                    <div class="socialmedialink"><a href="#"><img src="img/twitter-ico.png" alt=""></a></div>
+                    <div class="socialmedialink"><a href="#"><img src="img/instagram-ico.png" alt=""></a></div>
+                    <div class="socialmedialink"><a href="#"><img src="img/pinterest-ico.png" alt=""></a></div>
+                    <div class="socialmedialink"><a href="#"><img src="img/google-plus-ico.png" alt=""></a></div>
+                    <div class="socialmedialink"><a href="#"><img src="img/youtube-ico.png" alt=""></a></div>
+                    <div class="socialmedialink"><a href="#"><img src="img/dribbble-ico.png" alt=""></a></div>
+                    <div class="socialmedialink"><a href="#"><img src="img/tumblr-ico.png" alt=""></a></div>
                 </div>
                 <form>
                     <row>
@@ -688,7 +735,7 @@
 
                     <div class="last-blogs-item">
                         <a href="#">
-                            <img src="img/blog-img-3.png" alt="">
+                            <img src="img/blog-ico-1.png" alt="">
                             <div class="last-blogs-content">
                                 <p class="last-blog-title">LOREM IPSUM DOLOR SIT AMET. CONSECTETUR ADIPISCING</p>
                                 <p class="last-blog-date">Jan 9, 2016</p>
@@ -698,7 +745,7 @@
 
                     <div class="last-blogs-item">
                         <a href="#">
-                            <img src="img/blog-img-3.png" alt="">
+                            <img src="img/blog-ico-2.png" alt="">
                             <div class="last-blogs-content">
                                 <p class="last-blog-title">CONSECTETUR ADIPISCING ELIT. SED DO EUIUSMOD TEMPOR</p>
                                 <p class="last-blog-date">Dez 6, 2015</p>
@@ -708,7 +755,7 @@
 
                     <div class="last-blogs-item">
                         <a href="#">
-                            <img src="img/blog-img-3.png" alt="">
+                            <img src="img/blog-ico-3.png" alt="">
                             <div class="last-blogs-content">
                                 <p class="last-blog-title">SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE</p>
                                 <p class="last-blog-date">Out 22, 2015</p>
@@ -719,6 +766,41 @@
             </div>
             <div class="end-page-item end-page-social">
                 <h3>INSTAGRAM</h3>
+
+                <div class="instagram-pics">
+                    <div class="instagram-pics-item">
+                        <a href="#"><img src="img/instagram-pic-ico-1.png"></a>
+                    </div>
+                    <div class="instagram-pics-item">
+                        <a href="#"><img src="img/instagram-pic-ico-2.png"></a>
+                    </div>
+                    <div class="instagram-pics-item">
+                        <a href="#"><img src="img/instagram-pic-ico-3.png"></a>
+                    </div>
+                    <div class="instagram-pics-item">
+                        <a href="#"><img src="img/instagram-pic-ico-4.png"></a>
+                    </div>
+                    <div class="instagram-pics-item">
+                        <a href="#"><img src="img/instagram-pic-ico-5.png"></a>
+                    </div>
+                    <div class="instagram-pics-item">
+                        <a href="#"><img src="img/instagram-pic-ico-6.png"></a>
+                    </div>
+                    <div class="instagram-pics-item">
+                        <a href="#"><img src="img/instagram-pic-ico-7.png"></a>
+                    </div>
+                    <div class="instagram-pics-item">
+                        <a href="#"><img src="img/instagram-pic-ico-8.png"></a>
+                    </div>
+                    <div class="instagram-pics-item">
+                        <a href="#"><img src="img/instagram-pic-ico-9.png"></a>
+                    </div>
+                </div>
+                <a class="insta-link" href="#">View more photos</a>
+
+
+
+
             </div>
         </div>
         </section>
@@ -727,9 +809,9 @@
         
         
         <footer>Developed by <a href="#">Luan Jesus</a> - Design by <a href="#">Laaqiq</a></footer>
-        <script src="src/jquery-3.4.1.min.js"></script>
-        <script src="src/popper.min.js"></script>
-        <script src="src/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="src/main.js"></script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvkjW4iMSK1udQNbFeLOOzoVDx7EYiMvI&callback=inicializar"></script>
     </body>

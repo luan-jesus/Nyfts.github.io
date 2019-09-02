@@ -7,6 +7,23 @@ section{
     position: relative;
 }
 
+#loadscreen{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #fff;
+    z-index: 10000;
+    opacity: 1;
+}
+
+#loadscreen img{
+    width: 32px;
+    margin: 0 auto;
+}
+
 /*
 ==================================
 NAVBAR
@@ -46,6 +63,11 @@ NAVBAR
     border-bottom: 2px solid;
 }
 
+.nav-link-active{
+    color: #fce38a !important;
+    border-bottom: 2px solid !important;
+}
+
 .abosolute-top{
     position: absolute;
     top: 0;
@@ -64,7 +86,7 @@ header{
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background: url(../img/eaglebg.png) center no-repeat;
+    background: url(../img/eaglebg.jpg) center no-repeat;
     background-size: cover;
 }
 .x-header-gradient{
@@ -124,13 +146,14 @@ header{
 .x-header-content ul{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     list-style: none;
     position: absolute;
     bottom: 0;
     width: 100%;
 }
 .x-header-content ul li{
-    width: 25%;
+    flex: 1 1 20%;
     margin: 10px 10px 0;
 }
 .x-header-content ul li a{
@@ -156,6 +179,43 @@ header{
 .x-header-content button:hover{
     background-color: rgba(255,255,255,.3);
     transition: .2s background-color linear;
+}
+
+.header-nav-menu{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.white-line{
+    width: 100%;
+    background-color: #fff;
+    height: 2px;
+}
+
+.header-nav-menu-ul{
+    padding-inline-start: 0px;
+}
+
+.header-nav-menu-ul li{
+    opacity: 0.6;
+    transition: .1s all linear;
+}
+
+.header-nav-menu-ul li:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.header-nav-menu-ul li h7{
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.header-nav-menu-ul li h8{
+    font-weight: 400;
+    color: #fff;
 }
 
 /*
@@ -362,7 +422,7 @@ SECTION design
 */
 
 .design{
-    background: url(../img/design-bg.png) center no-repeat;
+    background: url(../img/design-bg.jpg) center no-repeat;
     background-size: cover;
 }
 
@@ -739,7 +799,7 @@ SECTION feedback
 */
 
 .feedback{
-    background: url(../img/feedback-bg.png) center no-repeat;
+    background: url(../img/feedback-bg.jpg) center no-repeat;
     background-size: cover;
 }
 
@@ -987,11 +1047,11 @@ SECTION end-page
 }
 
 .socialmedialink{
-    margin: 0 4px;
+    margin: 0 6px;
 }
 
 .socialmedialink a img{
-    height: 1.2em;
+    height: 1em;
     width: auto;
 }
 
@@ -1119,6 +1179,39 @@ SECTION end-page
     cursor: pointer;
 }
 
+
+
+.instagram-pics{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 14px;
+    width: 276px;
+    margin: 0;
+}
+
+.instagram-pics-item{
+    padding: 2px;
+}
+
+
+
+.instagram-pics-item:hover{
+    filter: grayscale(70%);
+}
+
+.insta-link{
+    color: #333333;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 48px;
+}
+
+.insta-link:hover{
+    color: #999999;
+    text-decoration: none;
+}
+
 /*
 ==================================
 FOOTER
@@ -1151,6 +1244,9 @@ MEDIA QUERYS
 */
 
 @media only screen and (max-width: 992px) {
+    .instagram-pics{
+        margin:  0 auto;
+    }
     .end-page-social{
         height: auto;
         width: 100%;
@@ -1287,13 +1383,17 @@ MEDIA QUERYS
     .portfolio-gradient div h5, .portfolio-gradient div h6{
         font-size: .7em;
     }
+    .x-header-content ul li{
+        flex: 1 1 40%;
+        margin: 10px 10px 0;
+    }
 }
 
 
 
 
-@media only screen and (min-height: 1080px) {
+@media only screen and (min-height: 900px) {
     header{
-        height: 1080px;
+        height: 900px;
     }
 }
