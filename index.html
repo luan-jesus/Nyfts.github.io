@@ -1,119 +1,121 @@
-<!-- xD -->
-<!DOTYPE html>
+<!DOCTYPE html>
 <html>
-<head>
-<title>game</title>
-<link href="https://fonts.googleapis.com/css?family=Montserrat:300,500,900&display=swap" rel="stylesheet">
-<style>
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ConteúdoSim</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-body{
-    margin-top: 50px;
-    user-select: none;
-    background-color:  white;
-}
-
-#canvas{
-    position: relative;
-    height: 350px;
-    width: 700px;
-    margin: 20px auto;
-    background-color: lightgrey;
-    display: grid;
-    align-items: center;
-}
-
-.entity{
-    position: absolute;
-    width: 28px;
-    height: 28px;
-    background-color: blue;
-    border-radius: 50%;
-}
-
-button{
-    padding: 10px 35px;
-    margin: 10px auto;
-    display: flex;
-}
-
- h1,h2,h3,h4,h5{
-    margin: 0;
-    text-align: center;
-    margin-bottom: 10px;
-    font-family: 'Montserrat', sans-serif;
- }
-
- h4,h5{
-    font-size: 20px;
-    margin: 0 5px;
- }
- 
- .keypad{
-    width: 25vw;
-    height: 25vw;
- }
-
-#Scoreboard, #menu, #gameOver{
-    background-color: white;
-    border-radius:  15px;
-    padding: 20px;
-    position: relative;
-    margin: 0 auto;
-    box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.75);
-    display: none;
-}
-
-table{
-    border-collapse: collapse;
-    font-family: 'Montserrat', sans-serif;
-    height: 270px;
-    display: block;
-    overflow-y: scroll;
-}
-
-tr{
-    border-bottom: 1px solid #000;
-}
-
-td{
-    padding: 5px 40px;
-}
-
-</style>
-</head>
-<body id="body">
-    <button style="position: absolute; top: 0; left: 0;" onclick="invert()">CLICKA</button>
-    <h1 style="font-weight: 900">Ultimate JS Game.</h1>
-    <h2 style="font-weight: 500">Use WASD to control the player</h2>
-    <h3 style="font-weight: 300">Don't get touched by the enemys, survive as long as you can!!</h3>
-    <div id="canvas">
-        <div id="menu" style="display: block;">
-            <button onClick="startGame()" >Start</button>
-            <button onClick="showScoreboard()">Scoreboard</button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Serviços</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Trabalhos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contate-nos</a>
+            </li>
+          </ul>
         </div>
-        <div id="Scoreboard">
-        </div>
-        <div id="gameOver">
-            <h2 style="font-weight: 500">Game Over</h2>
-            <h3 style="font-weight: 300">Score: <span id="scoreGO"></span></h3>
-            <input type="text" id="name" placeholder="Name" maxlength="20" />
-            <div>
-                <button onclick="saveGO()">Save</button><button onclick="closeGO()">Close</button>
-            </div>
-        </div>
-    </div>
-    <div style="display: flex; width: 700px; margin: 30px auto">
-        <div style="display: inherit; margin-left: auto"><h4>Score:</h4><h5 id="score" style="font-weight: 500">00</h5></div>
-    </div>
-    <div id="keyboard">
-        <center>
-        <button class="keypad" ontouchstart="upDown()">up</button><br>
-        <button class="keypad" ontouchstart="leftDown()" ontouchend="leftUp()">left</button><button class="keypad">down</button><button class="keypad" ontouchstart="rightDown()" ontouchend="rightUp()">right</button>
-        </center>
-    </div>
+      </div>
+    </nav>
 
-<script src="engine.js"></script>
-<script src="main.js"></script>
-<script src="ws.js"></script>
-</body>
+    <section id="content">
+      <div class="bgopacity">
+        <div class="container">
+          <div class="contentBox">
+            <h1>ConteúdoSim</h1>
+            <div class="hr"></div>
+            <p>
+              Deixe a produção e a coordenação de conteúdos por nossa conta.
+              Sabemos <strong>o quê</strong> e <strong>como</strong> fazer !
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <h2>Serviços</h2>
+        <div class="overCards">
+          <div class="custom-card">
+            <div class="cardlogo"></div>
+            <h4>Produção de Conteúdo</h4>
+            <p style="font-size: 14pt; text-align: center;">Livros, Manuais, Redes-Sociais e Materiais corporativos</p>
+          </div>
+          <div class="custom-card">
+            <div class="cardlogo"></div>
+            <h4>Coordenação de Produção</h4>
+            <p style="font-size: 14pt; text-align: center;">Articulação de Profissionais e Organização de Coleções</p>
+          </div>
+          <div class="custom-card">
+            <div class="cardlogo"></div>
+            <h4>Publicações</h4>
+            <p style="font-size: 14pt; text-align: center;">Supervisão, Contratação de Serviços e Eventos</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <div class="container">
+        <h2>Trabalhos</h2>
+        <div class="overCards">
+          <div class="portfolio-card">
+          </div>
+          <div class="portfolio-card">
+          </div>
+          <div class="portfolio-card">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact"></section>
+
+    <!-- Bootstrap dependencies -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
