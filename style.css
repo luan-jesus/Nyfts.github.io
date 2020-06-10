@@ -70,7 +70,7 @@ font-family: 'Roboto', sans-serif; - 500;700;900 */
 
 .bgopacity {
   padding: 100px 0 200px;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .contentBox {
@@ -169,5 +169,21 @@ h4 {
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav {
     align-items: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .contentBox { 
+    width: 100%;
+  }
+  h1 {
+    font-size: 32pt;
+  }
+  .overCards {
+    flex-direction: column;
+  }
+  .portfolio-card {
+    flex: auto;
+    margin: 20px 60px;
   }
 }
