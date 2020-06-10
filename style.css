@@ -3,6 +3,8 @@ font-family: 'Montserrat', sans-serif; - 700
 font-family: 'Raleway', sans-serif; - 400;700
 font-family: 'Roboto', sans-serif; - 500;700;900 */
 
+
+
 .navbar {
   -webkit-box-shadow: 0px 0px 62px -31px rgba(255,255,255,1);
   -moz-box-shadow: 0px 0px 62px -31px rgba(255,255,255,1);
@@ -68,6 +70,15 @@ font-family: 'Roboto', sans-serif; - 500;700;900 */
   background-color: #1f4062;
 }
 
+#contact {
+  background-color: #0b2235;
+  padding: 50px 0;
+
+  -webkit-box-shadow: 0px 0px 50px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 50px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 50px -10px rgba(0, 0, 0, 0.75);
+}
+
 .bgopacity {
   padding: 100px 0 200px;
   background-color: rgba(0, 0, 0, 0.8);
@@ -123,6 +134,13 @@ h2 {
   margin: 0 0 50px;
 }
 
+h3 {
+  color: #fff;
+  font-family: 'Crete Round', serif;
+  font-size: 42pt;
+  margin: 0 0 50px;
+}
+
 h4 {
   color: #fff;
   text-align: center;
@@ -130,6 +148,34 @@ h4 {
   font-weight: 700;
   font-size: 16pt;
   font-weight: bold;
+}
+
+h5 {
+  color: #fff;
+  font-family: 'Crete Round', sans-serif;
+  font-size: 16pt;
+  margin-bottom: 10px;
+}
+
+.textfield {
+  margin: 15px 0;
+}
+
+.textfield input, .textfield textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid darkgray;
+}
+
+.textfield button {
+  background-color: #179d6f;
+  padding: 10px 60px;
+  border: none;
+  border-radius: 15px;
+  color: #fff;
+  font-family: 'Crete Round', sans-serif;
+  font-size: 16pt;
 }
 
 .overCards {
@@ -162,8 +208,13 @@ h4 {
 }
 
 .portfolio-card:hover {
-  margin: -5px 60px 0;
-  height: 320px;
+  -webkit-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.75);
+}
+
+.contact-card {
+  width: 400px;
 }
 
 @media (min-width: 992px) {
