@@ -19,7 +19,10 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
-        <a class="navbar-brand" href="#" onclick="document.getElementById('services').scrollIntoView({ behavior: 'smooth'});">
+        <a
+          class="navbar-brand"
+          href="#"
+        >
           <img
             class="logoSim"
             src="src/Logotipo_ConteudoSim_RGB.png"
@@ -40,17 +43,32 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item mx-2">
-              <a class="nav-link" href="#">Home</a>
+            <li
+              class="nav-item mx-2"
+              onclick="document.getElementById('content').scrollIntoView({ behavior: 'smooth', block: 'end'});"
+            >
+              <a class="nav-link">Home</a>
             </li>
-            <li class="nav-item mx-2" onclick="teste()">
-              <a class="nav-link" href="#">Serviços</a>
+            <li
+              class="nav-item mx-2"
+              onclick="document.getElementById('services').scrollIntoView({ behavior: 'smooth', block: 'start'});"
+            >
+              <a class="nav-link">Serviços</a>
             </li>
             <li class="nav-item mx-2">
-              <a class="nav-link" href="#">Trabalhos</a>
+              <a
+                class="nav-link"
+                onclick="document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth', block: 'start'});"
+                >Trabalhos</a
+              >
             </li>
             <li class="nav-item mx-2" style="margin: 10px 0 20px;">
-              <a class="nav-button" href="#">Contate-nos</a>
+              <a
+                class="nav-button"
+                onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'start'});"
+                style="color: #fff"
+                >Contate-nos</a
+              >
             </li>
           </ul>
         </div>
@@ -78,7 +96,11 @@
         <div class="overCards">
           <div class="custom-card">
             <div class="cardlogo">
-              <img src="src/icons/list.png" alt="List" style="width: 60px; height: auto;" />
+              <img
+                src="src/icons/list.png"
+                alt="List"
+                style="width: 60px; height: auto;"
+              />
             </div>
             <h4>Produção de Conteúdo</h4>
             <p style="font-size: 14pt; text-align: center;">
@@ -87,7 +109,11 @@
           </div>
           <div class="custom-card">
             <div class="cardlogo">
-              <img src="src/icons/production.png" alt="List" style="width: 75px; height: auto;" />
+              <img
+                src="src/icons/production.png"
+                alt="List"
+                style="width: 75px; height: auto;"
+              />
             </div>
             <h4>Coordenação de Produção</h4>
             <p style="font-size: 14pt; text-align: center;">
@@ -96,7 +122,11 @@
           </div>
           <div class="custom-card">
             <div class="cardlogo">
-              <img src="src/icons/poem.png" alt="List" style="width: 70px; height: auto;" />
+              <img
+                src="src/icons/poem.png"
+                alt="List"
+                style="width: 70px; height: auto;"
+              />
             </div>
             <h4>Publicações</h4>
             <p style="font-size: 14pt; text-align: center;">
@@ -117,9 +147,17 @@
             rel="noopener noreferrer"
             class="portfolio-card"
           >
-            <img src="src/1.jpg" alt="1" style="width: 100%; height: 100%; border-radius: 5px;" />
+            <img
+              src="src/1.jpg"
+              alt="1"
+              style="width: 100%; height: 100%; border-radius: 5px;"
+            />
             <div class="portfolio-card-opacity-over">
-              <img src="src/behance-logo.png" alt="behance logo" class="behance-logo">
+              <img
+                src="src/behance-logo.png"
+                alt="behance logo"
+                class="behance-logo"
+              />
             </div>
           </a>
           <a
@@ -128,9 +166,17 @@
             rel="noopener noreferrer"
             class="portfolio-card"
           >
-            <img src="src/2.jpg" alt="2" style="width: 100%; height: 100%; border-radius: 5px;" />
+            <img
+              src="src/2.jpg"
+              alt="2"
+              style="width: 100%; height: 100%; border-radius: 5px;"
+            />
             <div class="portfolio-card-opacity-over">
-              <img src="src/behance-logo.png" alt="behance logo" class="behance-logo">
+              <img
+                src="src/behance-logo.png"
+                alt="behance logo"
+                class="behance-logo"
+              />
             </div>
           </a>
           <a
@@ -139,10 +185,18 @@
             rel="noopener noreferrer"
             class="portfolio-card"
           >
-          <img src="src/3.jpg" alt="3" style="width: 100%; height: 100%; border-radius: 5px;" />
-          <div class="portfolio-card-opacity-over">
-            <img src="src/behance-logo.png" alt="behance logo" class="behance-logo">
-          </div>
+            <img
+              src="src/3.jpg"
+              alt="3"
+              style="width: 100%; height: 100%; border-radius: 5px;"
+            />
+            <div class="portfolio-card-opacity-over">
+              <img
+                src="src/behance-logo.png"
+                alt="behance logo"
+                class="behance-logo"
+              />
+            </div>
           </a>
         </div>
       </div>
@@ -152,23 +206,39 @@
       <div class="container contact-container">
         <div class="contact-card">
           <h3>Vamos Conversar!</h3>
-          <p>Conte-me sobre sua ideia e vamos preenchê-la de <strong>conteúdo</strong></p>
+          <p>
+            Conte-me sobre sua ideia e vamos preenchê-la de
+            <strong>conteúdo</strong>
+          </p>
         </div>
         <div class="contact-card">
           <form method="post" action="sendmail.php">
             <div class="textfield">
               <h5>Nome</h5>
-              <input type="text" name="name" placeholder="Ex: Carlos Bueno"/>
+              <input type="text" name="name" placeholder="Ex: Carlos Bueno" />
             </div>
             <div class="textfield">
               <h5>Email</h5>
-              <input type="text" name="mail" placeholder="Ex: seunome@email.com"/>
+              <input
+                type="text"
+                name="mail"
+                placeholder="Ex: seunome@email.com"
+              />
             </div>
             <div class="textfield">
               <h5>Mensagem</h5>
-              <textarea id="message" name="message" rows="4" cols="50" placeholder="Escreva aqui..."></textarea>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                cols="50"
+                placeholder="Escreva aqui..."
+              ></textarea>
             </div>
-            <div class="textfield" style="display: flex; flex-direction: row-reverse;">
+            <div
+              class="textfield"
+              style="display: flex; flex-direction: row-reverse;"
+            >
               <button name="submit">Enviar</button>
             </div>
           </form>
@@ -200,6 +270,5 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-    
   </body>
 </html>
