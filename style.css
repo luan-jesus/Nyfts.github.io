@@ -13,12 +13,12 @@ font-family: 'Roboto', sans-serif; - 500;700;900 */
 
 .logoSim {
   width: auto;
-  height: 120px;
+  height: 100px;
   padding: 10px;
 }
 
 .nav-link {
-  font-size: 18.63pt;
+  font-size: 15pt;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
 }
@@ -40,7 +40,7 @@ font-family: 'Roboto', sans-serif; - 500;700;900 */
 .nav-button {
   padding-right: 0.5rem;
   padding-left: 0.5rem;
-  font-size: 16pt;
+  font-size: 14pt;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   color: #fefefe;
@@ -164,8 +164,8 @@ h5 {
 .textfield input, .textfield textarea {
   width: 100%;
   padding: 10px;
-  border-radius: 8px;
-  border: 2px solid darkgray;
+  border-radius: 5px;
+  border: 2px solid #8d8d8d;
 }
 
 .textfield button {
@@ -174,8 +174,14 @@ h5 {
   border: none;
   border-radius: 15px;
   color: #fff;
-  font-family: 'Crete Round', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
   font-size: 16pt;
+}
+
+.textfield button:hover {
+  cursor: pointer;
+  background-color: #21bc86;
 }
 
 .overCards {
@@ -196,10 +202,12 @@ h5 {
 }
 
 .portfolio-card {
+  position: relative;
   flex: 1;
   margin: 10px 60px;
   height: 300px;
   background-color: #009d70;
+  max-width: 300px;
   border-radius: 5px;
   -webkit-box-shadow: 0px 0px 50px -20px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 50px -20px rgba(0, 0, 0, 0.75);
@@ -208,13 +216,48 @@ h5 {
 }
 
 .portfolio-card:hover {
-  -webkit-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.75);
+}
+
+.portfolio-card-opacity-over {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0);
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,0.5)));
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+  background: -o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+  background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+  opacity: 0;
+  top: 0;
+  left: 0;
+  z-index: 13;
+}
+
+.portfolio-card:hover .portfolio-card-opacity-over {
+  opacity: 1;
+  transition: all linear .2s;
+}
+
+.behance-logo {
+  position: absolute;
+  width: 45px;
+  height: auto;
+  margin: 20px;
+  bottom: 0;
+  left: 0;
 }
 
 .contact-card {
   width: 400px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 60px;
 }
 
 @media (min-width: 992px) {
@@ -236,5 +279,12 @@ h5 {
   .portfolio-card {
     flex: auto;
     margin: 20px 60px;
+  }
+  .contact-container {
+    flex-direction: column;
+    padding: 0 30px;
+  }
+  .contact-card {
+    width: 100%;
   }
 }
