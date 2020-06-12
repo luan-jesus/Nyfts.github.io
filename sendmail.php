@@ -27,7 +27,7 @@ if(isset($_POST['submit']))
 		$mail->Port = 587;
 	
 		$mail->setFrom('conteudosimmailsender@gmail.com');
-		$mail->addAddress('luan.todos@gmail.com');
+		$mail->addAddress('contatoconteudosim@gmail.com');
 	
 		$mail->isHTML(true);
 		$mail->Subject = "Contato de {$name} via ConteudoSim";
@@ -35,13 +35,10 @@ if(isset($_POST['submit']))
 		$mail->AltBody = "Email: {$email}, {$message}";
 	
 		if($mail->send()) {
-			echo 'Email enviado com sucesso';
+			echo '<h1>Mensagem enviada com sucesso</h1><br /><a href="http://conteudosim.com.br/">Clique aqui para retornar</a>';
 		} else {
-			echo 'Email nao enviado';
+			echo '<h1>Falha ao enviar a mensagem</h1><br /><a href="http://conteudosim.com.br/">Clique aqui para retornar</a>';
 		}
-
-		header("Location: http://localhost/"); 
-		exit();
 	} catch (Exception $e) {
 		echo "Erro ao enviar mensagem {$mail->ErrorInfo}";
 	}
