@@ -142,18 +142,19 @@
     <section class="section-sensor container">
       <h2 class="sensor-title">Sensores robustos e confiáveis</h2>
     </section>
+
+    <script>
+      window.onscroll = function () {
+        if (window.pageYOffset >= 200) {
+          document
+            .getElementById("navbar-fixed-wrapper")
+            .classList.add("navbar-wrapper-fixed-on");
+        } else {
+          document
+            .getElementById("navbar-fixed-wrapper")
+            .classList.remove("navbar-wrapper-fixed-on");
+        }
+      };
+    </script>
   </body>
-  <script>
-    window.onscroll = function () {
-      if (window.pageYOffset >= 200) {
-        document
-          .getElementById("navbar-fixed-wrapper")
-          .classList.add("navbar-wrapper-fixed-on");
-      } else {
-        document
-          .getElementById("navbar-fixed-wrapper")
-          .classList.remove("navbar-wrapper-fixed-on");
-      }
-    };
-  </script>
 </html>
