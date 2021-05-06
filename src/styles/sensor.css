@@ -1,0 +1,15 @@
+.section-sensor {
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sensor-title {
+  color: #595979;
+  font-size: 55px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  text-align: center;
+  width: 800px;
+}

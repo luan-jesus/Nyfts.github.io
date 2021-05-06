@@ -1,275 +1,159 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="icon" href="./favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="Iot Nest" content="Site apresentação sensores Iot Nest" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Montserrat:wght@700&family=Raleway:wght@400;700&family=Roboto:wght@500;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@600;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ConteúdoSim</title>
+    <link rel="stylesheet" href="index.css" />
+    <title>IoT Nest Sensor</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar-wrapper">
       <div class="container">
-        <a
-          class="navbar-brand"
-          href="#"
-        >
-          <img
-            class="logoSim"
-            src="src/Logotipo_ConteudoSim_RGB.webp"
-            alt="Logotipo ConteudoSim"
-          />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li
-              class="nav-item mx-2"
-              onclick="document.getElementById('content').scrollIntoView({ behavior: 'smooth', block: 'end'});"
-            >
-              <a class="nav-link">Home</a>
+        <div class="navbar">
+          <a class="header-logo" href="#">
+            <img
+              src="./src/assets/vetores_svg/icone_tecnologia_avancada.svg"
+              alt="iot-nest logo"
+            />
+          </a>
+          <ul class="navbar-menu">
+            <li>
+              <a href="#">Produto</a>
             </li>
-            <li
-              class="nav-item mx-2"
-              onclick="document.getElementById('services').scrollIntoView({ behavior: 'smooth', block: 'start'});"
-            >
-              <a class="nav-link">Serviços</a>
+            <li>
+              <a href="#">Como Funciona</a>
             </li>
-            <li class="nav-item mx-2">
-              <a
-                class="nav-link"
-                onclick="document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth', block: 'start'});"
-                >Trabalhos</a
-              >
+            <li>
+              <a href="#">Vantagens</a>
             </li>
-            <li class="nav-item mx-2" style="margin: 10px 0 20px;">
-              <a
-                class="nav-button"
-                onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'start'});"
-                style="color: #fff"
-                >Contate-nos</a
-              >
+            <li>
+              <a href="#">Simule o plano</a>
             </li>
           </ul>
+          <button class="navbar-button">Teste gratuito</button>
         </div>
       </div>
     </nav>
 
-    <section id="content">
-      <div class="bgopacity">
-        <div class="container">
-          <div class="contentBox">
-            <h1>ConteúdoSim</h1>
-            <div class="hr"></div>
-            <p>
-              Deixe a produção e a coordenação de conteúdos por nossa conta.
-              Sabemos <strong>o quê</strong> e <strong>como</strong> fazer !
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="services">
+    <nav class="navbar-wrapper-fixed" id="navbar-fixed-wrapper">
       <div class="container">
-        <h2>Serviços</h2>
-        <div class="overCards">
-          <div class="custom-card">
-            <div class="cardlogo">
-              <img
-                src="src/icons/list.png"
-                alt="List"
-                style="width: 60px; height: auto;"
-              />
-            </div>
-            <h4>Produção de Conteúdo</h4>
-            <p style="font-size: 14pt; text-align: center;">
-              Livros, Manuais, Redes-Sociais e Materiais corporativos
+        <div class="navbar-fixed" id="navbar">
+          <a class="header-logo-fixed" href="#">
+            <img
+              src="./src/assets/vetores_svg/icone_tecnologia_avancada.svg"
+              alt="iot-nest logo"
+            />
+          </a>
+          <ul class="navbar-menu-fixed">
+            <li>
+              <a href="#">Produto</a>
+            </li>
+            <li>
+              <a href="#">Como Funciona</a>
+            </li>
+            <li>
+              <a href="#">Vantagens</a>
+            </li>
+            <li>
+              <a href="#">Simule o plano</a>
+            </li>
+          </ul>
+          <button class="navbar-button-fixed">Teste gratuito</button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <header class="header-section">
+        <div class="header-background-image">
+          <img src="./src/assets/vetores_svg/home_image.svg" alt="Máquinas" />
+        </div>
+        <h1 class="header-title">Sistema preditivo IoT Nest Sensor</h1>
+        <p class="header-description">
+          Tecnologia para o monitoramento do funcionamento de máquinas
+        </p>
+        <button class="header-button">Faça um teste gratuito</button>
+        <a href="#" class="header-button-help-text">Como funciona?</a>
+      </header>
+    </div>
+
+    <section class="section-monitoring">
+      <div class="section-monitoring-content container">
+        <div class="monitoring-bird-background monitoring-bird-1">
+          <img src="./src/assets/vetores_svg/path_bird.png" alt="Path Bird" />
+        </div>
+        <div class="monitoring-bird-background monitoring-bird-2">
+          <img src="./src/assets/vetores_svg/path_bird_2.png" alt="Path Bird" />
+        </div>
+        <h2 class="monitoring-title">
+          Sistema para monitoramento do seu ativo
+        </h2>
+        <div class="monitoring-cards-wrapper">
+          <div class="monitoring-card">
+            <img
+              class="monitoring-card-image"
+              src="./src/assets/vetores_svg/icone_tecnologia_avancada.svg"
+              alt="Ícone Tecnologia avançada"
+            />
+            <h4 class="monitoring-card-title">Tecnologia Avançada</h4>
+            <p class="monitoring-card-description">
+              Hardware robusto para Indústria, transmissão em longas distâncias
+              e Inteligência artificial
             </p>
           </div>
-          <div class="custom-card">
-            <div class="cardlogo">
-              <img
-                src="src/icons/production.png"
-                alt="List"
-                style="width: 75px; height: auto;"
-              />
-            </div>
-            <h4>Coordenação de Produção</h4>
-            <p style="font-size: 14pt; text-align: center;">
-              Articulação de Profissionais e Organização de Coleções
+          <div class="monitoring-card">
+            <img
+              class="monitoring-card-image"
+              src="./src/assets/vetores_svg/icone_praticidade.svg"
+              alt="Ícone praticidade"
+            />
+            <h4 class="monitoring-card-title">Praticidade</h4>
+            <p class="monitoring-card-description">
+              Instalação rápida e sem fios<br />
+              Plug & Play com o seu celular<br />
+              Alertas e diagnósticos via Web
             </p>
           </div>
-          <div class="custom-card">
-            <div class="cardlogo">
-              <img
-                src="src/icons/poem.png"
-                alt="List"
-                style="width: 70px; height: auto;"
-              />
-            </div>
-            <h4>Publicações</h4>
-            <p style="font-size: 14pt; text-align: center;">
-              Supervisão, Contratação de Serviços e Eventos
+          <div class="monitoring-card">
+            <img
+              class="monitoring-card-image"
+              src="./src/assets/vetores_svg/icone_baixo_custo.svg"
+              alt="Ícone baixo custo"
+            />
+            <h4 class="monitoring-card-title">Baixo Custo</h4>
+            <p class="monitoring-card-description">
+              Sem custo de aquisição<br />
+              Sem limite mínimo de sensores<br />
+              Planos que cabem no seu bolso
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="portfolio">
-      <div class="container">
-        <h2>Trabalhos</h2>
-        <div class="overCards">
-          <a
-            href="https://www.behance.net/gallery/90023813/Guia-de-Profissoes-2004"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="portfolio-card"
-          >
-            <img
-              src="src/1.webp"
-              alt="1"
-              style="width: 100%; height: 100%; border-radius: 5px;"
-            />
-            <div class="portfolio-card-opacity-over">
-              <img
-                src="src/behance-logo.webp"
-                alt="behance logo"
-                class="behance-logo"
-              />
-            </div>
-          </a>
-          <a
-            href="https://www.behance.net/gallery/90024473/Coordenacao-2012-2013"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="portfolio-card"
-          >
-            <img
-              src="src/2.webp"
-              alt="2"
-              style="width: 100%; height: 100%; border-radius: 5px;"
-            />
-            <div class="portfolio-card-opacity-over">
-              <img
-                src="src/behance-logo.webp"
-                alt="behance logo"
-                class="behance-logo"
-              />
-            </div>
-          </a>
-          <a
-            href="https://www.behance.net/gallery/90023727/Coordenacao-2003-1-Semestre"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="portfolio-card"
-          >
-            <img
-              src="src/3.webp"
-              alt="3"
-              style="width: 100%; height: 100%; border-radius: 5px;"
-            />
-            <div class="portfolio-card-opacity-over">
-              <img
-                src="src/behance-logo.webp"
-                alt="behance logo"
-                class="behance-logo"
-              />
-            </div>
-          </a>
-        </div>
-      </div>
+    <section class="section-sensor container">
+      <h2 class="sensor-title">Sensores robustos e confiáveis</h2>
     </section>
-
-    <section id="contact">
-      <div class="container contact-container">
-        <div class="contact-card">
-          <h3>Vamos Conversar!</h3>
-          <p>
-            Conte-me sobre sua ideia e vamos preenchê-la de
-            <strong>conteúdo</strong>
-          </p>
-        </div>
-        <div class="contact-card">
-          <form method="post" action="sendmail.php">
-            <div class="textfield">
-              <h5>Nome</h5>
-              <input type="text" name="name" placeholder="Ex: Carlos Bueno" />
-            </div>
-            <div class="textfield">
-              <h5>Email</h5>
-              <input
-                type="text"
-                name="mail"
-                placeholder="Ex: seunome@email.com"
-              />
-            </div>
-            <div class="textfield">
-              <h5>Mensagem</h5>
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                cols="50"
-                placeholder="Escreva aqui..."
-              ></textarea>
-            </div>
-            <div
-              class="textfield"
-              style="display: flex; flex-direction: row-reverse;"
-            >
-              <button name="submit">Enviar</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <script>
-      function teste() {
-        console.log("aqui");
-        document.getElementById("services").scrollIntoView();
-        console.log("fim");
-      }
-    </script>
-
-    <!-- Bootstrap dependencies -->
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
   </body>
+  <script>
+    window.onscroll = function () {
+      if (window.pageYOffset >= 200) {
+        document
+          .getElementById("navbar-fixed-wrapper")
+          .classList.add("navbar-wrapper-fixed-on");
+      } else {
+        document
+          .getElementById("navbar-fixed-wrapper")
+          .classList.remove("navbar-wrapper-fixed-on");
+      }
+    };
+  </script>
 </html>

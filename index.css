@@ -1,0 +1,11 @@
+@import url("./src/styles/normalize.css");
+@import url("./src/styles/navbar.css");
+@import url("./src/styles/navbarFixed.css");
+@import url("./src/styles/header.css");
+@import url("./src/styles/monitoring.css");
+@import url("./src/styles/sensor.css");
+
+.container {
+  margin: 0 auto;
+  width: 1300px;
+}

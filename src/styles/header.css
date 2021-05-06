@@ -1,0 +1,66 @@
+.header-section {
+  position: relative;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.header-background-image {
+  position: absolute;
+  width: 75%;
+  bottom: 0;
+  z-index: -1;
+}
+
+.header-title {
+  color: #595979;
+  font-size: 72px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  width: 700px;
+  text-align: center;
+  margin: 20px 0 40px;
+}
+
+.header-description {
+  font-size: 22px;
+  color: #595979;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  width: 500px;
+  margin: 0 0 40px;
+}
+
+.header-button {
+  background-color: #68F7CF;
+  border: none;
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  padding: 15px 30px;
+  border-radius: 10px;
+  color: #595979;
+  margin-bottom: 15px;
+}
+
+.header-button:hover {
+  cursor: pointer;
+  background-color: #5bd8b5;
+
+  transition: .2s all linear;
+}
+
+.header-button-help-text {
+  font-size: 18px;
+  color: #595979;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+}
+
+.header-button-help-text:hover {
+  color: #000;
+  transition: .2s all linear;
+}
