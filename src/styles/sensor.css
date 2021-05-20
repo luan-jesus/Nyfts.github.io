@@ -5,11 +5,64 @@
   align-items: center;
 }
 
-.sensor-title {
-  color: #595979;
-  font-size: 55px;
-  font-family: "Raleway", sans-serif;
-  font-weight: 800;
-  text-align: center;
-  width: 800px;
+.sensor-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sensor-info {
+  position: relative;
+  background-color: #fff;
+  box-shadow: 3px 3px 25px #00000029;
+  padding: 30px;
+  max-width: 300px;
+  border-radius: 15px;
+}
+
+.sensor-info-title {
+  letter-spacing: 0px;
+  color: #403F57;
+  font-size: 25px;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  font-weight: 700;
+}
+
+.sensor-info-paragraph {
+  color: #403F57;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.sensor-image {
+  width: 300px;
+  transform: scaleX(-1);
+  margin: 0 100px;
+}
+
+.sensor-dots-wrapper {
+  height: 100%;
+}
+
+.sensor-dots-item {
+  margin: 60px 0;
+}
+
+.sensor-dots-item-title {
+  font-size: 30px;
+  color: #1F72EC;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  font-weight: 700;
+}
+
+.sensor-dots-item-description {
+  color: #403F57;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  margin: 10px 0 0 0;
+  max-width: 280px;
+  font-weight: 400;
 }

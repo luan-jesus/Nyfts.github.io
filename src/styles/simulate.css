@@ -1,0 +1,77 @@
+.section-simulate {
+  padding: 150px 0 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.simulate-calculator-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.simulate-calculator-sign {
+  font-size: 105px;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  color: #403F57;
+  opacity: .16;
+  margin: 0 50px;
+  align-self: flex-end;
+  user-select: none;
+}
+
+.simulate-calculator-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.simulate-calculator-input-label {
+  font-size: 25px;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  color: #403F57;
+}
+
+.simulate-calculator-input-text {
+  box-shadow: 3px 3px 25px #00000029;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  border-radius: 20px;
+  padding: 27.5px;
+  text-align: center;
+  max-width: 200px;
+  border: none;
+  background-color: #fff;
+}
+
+.simulate-calculator-input-text:focus {
+  outline: none;
+}
+
+
+.simulate-calculator-input-radio {
+  box-shadow: 3px 3px 25px #00000029;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  border-radius: 20px;
+  padding: 27.5px;
+  text-align: center;
+  max-width: 200px;
+  margin: 0 20px;
+}
+
+.simulate-calculator-input-radio:hover {
+  cursor: pointer;
+}
+
+.simulate-calculator-input-radio-selected {
+  background-color: #3396FF;
+  color: #fff;
+}

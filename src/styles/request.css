@@ -1,0 +1,7 @@
+.section-request {
+  padding: 200px 0 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}

@@ -4,8 +4,85 @@
 @import url("./src/styles/header.css");
 @import url("./src/styles/monitoring.css");
 @import url("./src/styles/sensor.css");
+@import url("./src/styles/howitworks.css");
+@import url("./src/styles/technology.css");
+@import url("./src/styles/maintenance.css");
+@import url("./src/styles/simulate.css");
+@import url("./src/styles/request.css");
 
 .container {
   margin: 0 auto;
   width: 1300px;
+}
+
+.carousel-menu-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px;
+}
+
+.carousel-menu-item {
+  background-color: #fff;
+  padding: 6px;
+  border-radius: 50%;
+  margin: 0 10px;
+  border: 2px solid #fff;
+  transition: .1s all linear;
+}
+
+.carousel-menu-item:hover {
+  cursor: pointer;
+  background-color: #9bcdff;
+}
+
+.carousel-menu-item-active {
+  background-color: #3396FF;
+}
+
+.carousel-menu-item-active:hover {
+  cursor: pointer;
+  background-color: #3396FF;
+}
+
+.title {
+  margin: 0;
+  font-size: 55px;
+  color: #595979;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  text-align: center;
+  z-index: 1;
+}
+
+.title-light {
+  margin: 0;
+  font-size: 55px;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  text-align: center;
+  z-index: 1;
+}
+
+.description {
+  font-size: 22px;
+  color: #595979;
+  font-family: 'Montserrat', sans-serif;
+  max-width: 600px;
+  text-align: center;
+  margin: 40px 0 80px;
+}
+
+.description-light {
+  font-size: 22px;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  max-width: 600px;
+  text-align: center;
+  margin: 40px 0 80px;
+}
+
+::placeholder {
+  color: #E0E0E4;
 }

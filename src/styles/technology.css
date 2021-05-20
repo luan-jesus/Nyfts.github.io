@@ -1,0 +1,9 @@
+.section-technology {
+  width: 100%;
+  background-color: #3396ff;
+  z-index: 1;
+}
+
+.technology-cards-wrapper {
+  margin-bottom: 40px;
+}
