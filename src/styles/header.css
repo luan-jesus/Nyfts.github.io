@@ -36,13 +36,13 @@
 .header-button {
   background-color: #68F7CF;
   border: none;
-  font-size: 20px;
+  font-size: 18px;
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
-  padding: 15px 30px;
-  border-radius: 10px;
+  padding: 20px 30px;
+  border-radius: 7px;
   color: #595979;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .header-button:hover {
@@ -58,9 +58,10 @@
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
+  transition: .2s all linear;
 }
 
 .header-button-help-text:hover {
   color: #000;
-  transition: .2s all linear;
+  cursor: pointer;
 }

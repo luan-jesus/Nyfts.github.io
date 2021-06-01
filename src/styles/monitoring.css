@@ -11,6 +11,15 @@
   position: relative;
   padding-bottom: 80px;
   padding-top: 80px;
+  right: 0px;
+
+  transition: 1s ease all;
+}
+
+.monitoring-content-hide {
+  position: relative;
+  right: -200px;
+  opacity: 0;
 }
 
 .monitoring-cards-wrapper {

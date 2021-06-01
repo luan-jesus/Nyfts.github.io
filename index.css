@@ -9,6 +9,7 @@
 @import url("./src/styles/maintenance.css");
 @import url("./src/styles/simulate.css");
 @import url("./src/styles/request.css");
+@import url("./src/styles/contact.css");
 
 .container {
   margin: 0 auto;
@@ -19,7 +20,7 @@
   display: flex;
   list-style: none;
   padding: 0;
-  margin: 0 0 40px;
+  margin: 0 0 20px;
 }
 
 .carousel-menu-item {
@@ -50,7 +51,7 @@
   font-size: 55px;
   color: #595979;
   font-family: "Raleway", sans-serif;
-  font-weight: 800;
+  font-weight: 700;
   text-align: center;
   z-index: 1;
 }
@@ -60,7 +61,7 @@
   font-size: 55px;
   color: #fff;
   font-family: "Raleway", sans-serif;
-  font-weight: 800;
+  font-weight: 700;
   text-align: center;
   z-index: 1;
 }
@@ -85,4 +86,13 @@
 
 ::placeholder {
   color: #E0E0E4;
+}
+
+footer {
+  width: 100%;
+  margin: 40px 0;
+  color: #3396FF;
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
 }
