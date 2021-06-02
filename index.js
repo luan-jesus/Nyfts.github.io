@@ -9,8 +9,19 @@ window.onscroll = function () {
       .classList.remove("navbar-wrapper-fixed-on")
   }
 
-  showElement("monitoring-content")
-  showElement("sensor-content")
+  showElement({elementIsVisible: "monitoring-content", elementId: "monitoring-content", classToRemove: "monitoring-content-hide"})
+
+  showElement({elementIsVisible: "sensor-content", elementId: "sensor-info", classToRemove: "sensor-info-hide"})
+  showElement({elementIsVisible: "sensor-content", elementId: "sensor-dots-wrapper", classToRemove: "sensor-dots-wrapper-hide"})
+
+  showElement({elementIsVisible: "how-it-works-content", elementId: "how-it-works-content-image", classToRemove: "how-it-works-content-image-hide"})
+
+  showElement({elementIsVisible: "technology-content", elementId: "section-technology-title", classToRemove: "section-technology-title-hide"})
+  showElement({elementIsVisible: "technology-content", elementId: "technology-cards-wrapper", classToRemove: "technology-cards-wrapper-hide"})
+
+  showElement({elementIsVisible: "section-maintenance", elementId: "section-maintenance-title", classToRemove: "section-maintenance-title-hide"})
+  showElement({elementIsVisible: "section-maintenance", elementId: "section-maintenance-description", classToRemove: "section-maintenance-description-hide"})
+  showElement({elementIsVisible: "section-maintenance", elementId: "maintenance-carousel-wrapper", classToRemove: "maintenance-carousel-wrapper-hide"})
 };
 
 
@@ -20,10 +31,9 @@ function isElementVisible(elementId) {
   return window.pageYOffset > (element.offsetTop - element.offsetHeight)
 }
 
-function showElement(elementId) {
-  console.log(document.getElementById(elementId))
-  if (isElementVisible(elementId) && document.getElementById(elementId).classList.contains(`${elementId}-hide`)) {
-    document.getElementById(elementId).classList.remove(`${elementId}-hide`)
+function showElement(options) {
+  if (isElementVisible(options?.elementIsVisible) && document.getElementById(options?.elementId).classList.contains(options?.classToRemove)) {
+    document.getElementById(options?.elementId).classList.remove(options?.classToRemove)
   }
 }
 

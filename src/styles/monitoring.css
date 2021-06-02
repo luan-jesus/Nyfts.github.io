@@ -13,12 +13,12 @@
   padding-top: 80px;
   right: 0px;
 
-  transition: 1s ease all;
+  transition: 1.5s ease-out opacity, 1s ease-out right;
 }
 
 .monitoring-content-hide {
   position: relative;
-  right: -200px;
+  right: -300px;
   opacity: 0;
 }
 

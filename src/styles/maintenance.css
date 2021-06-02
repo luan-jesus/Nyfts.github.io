@@ -5,6 +5,24 @@
   position: relative;
 }
 
+.section-maintenance-title {
+  opacity: 1;
+  transition: 1s ease-out opacity;
+}
+
+.section-maintenance-title-hide {
+  opacity: 0;
+}
+
+.section-maintenance-description {
+  opacity: 1;
+  transition: 2s ease-out opacity;
+}
+
+.section-maintenance-description-hide {
+  opacity: 0;
+}
+
 .maintenance-bg-white {
   position: absolute;
   width: 100%;
@@ -27,6 +45,14 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+  right: 0px;
+  opacity: 1;
+  transition: 2s ease opacity, 1.5s ease-out right;
+}
+
+.maintenance-carousel-wrapper-hide {
+  right: -300px;
+  opacity: .1;
 }
 
 .maintenance-carousel-desktop {

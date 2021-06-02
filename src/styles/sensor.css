@@ -5,9 +5,6 @@
   align-items: center;
   bottom: 0px;
   position: relative;
-
-  position: relative;
-  transition: 1s ease all;
 }
 
 .sensor-content-hide {
@@ -20,6 +17,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
+  position: relative;
 }
 
 .sensor-info {
@@ -29,6 +28,14 @@
   padding: 30px;
   max-width: 300px;
   border-radius: 15px;
+  left: 0px;
+  
+  transition: 1s ease-out left, 1.5s ease-out opacity;
+}
+
+.sensor-info-hide {
+  left: -300px;
+  opacity: 0;
 }
 
 .sensor-info-title {
@@ -55,6 +62,14 @@
 
 .sensor-dots-wrapper {
   height: 100%;
+  position: relative;
+  right: 0px;
+  transition: 1.5s ease-out right, 2s ease-out opacity;
+}
+
+.sensor-dots-wrapper-hide {
+  right: -300px;
+  opacity: 0;
 }
 
 .sensor-dots-item {

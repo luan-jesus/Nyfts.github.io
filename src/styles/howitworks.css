@@ -7,7 +7,14 @@
 }
 
 .how-it-works-image {
-  width: 80%;
+  width: 90%;
   margin-bottom: 80px;
   margin-top: 90px;
+  opacity: 1;
+  transition: 2s ease opacity;
+  position: relative;
+}
+
+.how-it-works-content-image-hide {
+  opacity: 0;
 }

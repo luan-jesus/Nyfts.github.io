@@ -58,7 +58,7 @@
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
-  transition: .2s all linear;
+  transition: .2s color linear;
 }
 
 .header-button-help-text:hover {
