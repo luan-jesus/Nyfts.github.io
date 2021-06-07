@@ -10,7 +10,7 @@
 .sensor-content-hide {
   position: relative;
   bottom: -200px;
-  opacity: 0.1;
+  opacity: 0;
 }
 
 .sensor-content {

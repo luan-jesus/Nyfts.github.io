@@ -1,395 +1,435 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="./favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="Iot Nest" content="Site apresentação sensores Iot Nest" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="index.css" />
-    <title>IoT Nest Sensor</title>
-  </head>
-  <body>
-    
-    <nav class="navbar-wrapper">
-      <div class="container">
-        <div class="navbar">
-          <a class="header-logo" href="#">
-            <img
-              src="./src/assets/vetores_svg/icone_tecnologia_avancada.svg"
-              alt="iot-nest logo"
-            />
-          </a>
-          <ul class="navbar-menu">
-            <li>
-              <a onclick="scrollToElement('sensor-content')">Produto</a> 
-            </li>
-            <li>
-              <a onclick="scrollToElement('how-it-works-content')">Como Funciona</a>
-            </li>
-            <li>
-              <a onclick="scrollToElement('technology-content')">Vantagens</a>
-            </li>
-            <li>
-              <a onclick="scrollToElement('simulate-content')">Simule o plano</a>
-            </li>
-          </ul>
-          <button class="navbar-button" onclick="scrollToElement('request-content')">Teste gratuito</button>
-        </div>
-      </div>
-    </nav>
+<!doctype html>
+<html class="no-js" lang="">
 
-    <nav class="navbar-wrapper-fixed" id="navbar-fixed-wrapper">
-      <div class="container">
-        <div class="navbar-fixed" id="navbar">
-          <a class="header-logo-fixed" href="#">
-            <img
-              src="./src/assets/vetores_svg/icone_tecnologia_avancada.svg"
-              alt="iot-nest logo"
-            />
-          </a>
-          <ul class="navbar-menu-fixed">
-            <li>
-              <a onclick="scrollToElement('sensor-content')">Produto</a> 
-            </li>
-            <li>
-              <a onclick="scrollToElement('how-it-works-content')">Como Funciona</a>
-            </li>
-            <li>
-              <a onclick="scrollToElement('technology-content')">Vantagens</a>
-            </li>
-            <li>
-              <a onclick="scrollToElement('simulate-content')">Simule o plano</a>
-            </li>
-          </ul>
-          <button class="navbar-button-fixed" onclick="scrollToElement('request-content')">Teste gratuito</button>
-        </div>
-      </div>
-    </nav>
+<head>
+  <meta charset="utf-8">
+  <title>IoT Nest Sensor</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
 
+<body>
+  <nav class="navbar-wrapper">
     <div class="container">
-      <header class="header-section">
-        <div class="header-background-image">
-          <img src="./src/assets/vetores_svg/home_image.svg" alt="Máquinas" />
-        </div>
-        <h1 class="header-title">Sistema preditivo IoT Nest Sensor</h1>
-        <p class="header-description">
-          Tecnologia para o monitoramento do funcionamento de máquinas
-        </p>
-        <button class="header-button" onclick="scrollToElement('request-content')">Faça um teste gratuito</button>
-        <a class="header-button-help-text" onclick="scrollToElement('how-it-works-content')">Como funciona?</a>
-      </header>
-    </div>
-
-    <section class="section-monitoring">
-      <div class="section-monitoring-content monitoring-content-hide container" id="monitoring-content">
-        <!-- <div class="monitoring-bird-background monitoring-bird-1">
-          <img src="./src/assets/vetores_svg/path_bird.png" alt="Path Bird" />
-        </div>
-        <div class="monitoring-bird-background monitoring-bird-2">
-          <img src="./src/assets/vetores_svg/path_bird_2.png" alt="Path Bird" />
-        </div> -->
-        <h2 class="title-light" style="width: 800px">
-          Sistema para monitoramento do seu ativo
-        </h2>
-        <div class="monitoring-cards-wrapper">
-          <div class="monitoring-card">
-            <img
-              class="monitoring-card-image"
-              src="./src/assets/vetores_svg/icone_tecnologia_avancada.svg"
-              alt="Ícone Tecnologia avançada"
-            />
-            <h4 class="monitoring-card-title">Tecnologia Avançada</h4>
-            <p class="monitoring-card-description">
-              Hardware robusto para Indústria, transmissão em longas distâncias
-              e Inteligência artificial
-            </p>
-          </div>
-          <div class="monitoring-card">
-            <img
-              class="monitoring-card-image"
-              src="./src/assets/vetores_svg/icone_praticidade.svg"
-              alt="Ícone praticidade"
-            />
-            <h4 class="monitoring-card-title">Praticidade</h4>
-            <p class="monitoring-card-description">
-              Instalação rápida e sem fios<br />
-              Plug & Play com o seu celular<br />
-              Alertas e diagnósticos via Web
-            </p>
-          </div>
-          <div class="monitoring-card">
-            <img
-              class="monitoring-card-image"
-              src="./src/assets/vetores_svg/icone_baixo_custo.svg"
-              alt="Ícone baixo custo"
-            />
-            <h4 class="monitoring-card-title">Baixo Custo</h4>
-            <p class="monitoring-card-description">
-              Sem custo de aquisição<br />
-              Sem limite mínimo de sensores<br />
-              Planos que cabem no seu bolso
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-sensor container" id="sensor-content">
-      <h2 class="title">Sensores robustos e confiáveis</h2>
-      <div class="sensor-content">
-        <div class="sensor-info sensor-info-hide" id="sensor-info">
-          <h5 class="sensor-info-title">IoT Nest Sensor</h5>
-
-          <p class="sensor-info-paragraph">
-            - Instalação dos sensores prática, rápida e sem fio
-          </p>
-          <p class="sensor-info-paragraph">
-            - Desenvolvido para suportar ambientes industriais agressivos
-          </p>
-        </div>
-
-        <img
-          class="sensor-image"
-          src="src/assets/imagens/sensor.png"
-          alt="sensor"
-        />
-        <div class="sensor-dots-wrapper sensor-dots-wrapper-hide" id="sensor-dots-wrapper">
-          <div class="sensor-dots-item">
-            <h5 class="sensor-dots-item-title">1. Antena</h5>
-            <p class="sensor-dots-item-description">
-              Capacitado para transmissão em longas distâncias
-            </p>
-          </div>
-          <div class="sensor-dots-item">
-            <h5 class="sensor-dots-item-title">2. Bateria</h5>
-            <p class="sensor-dots-item-description">
-              Duração estimada de 3 anos
-            </p>
-          </div>
-          <div class="sensor-dots-item">
-            <h5 class="sensor-dots-item-title">3. Tecnologia IoT Nest</h5>
-            <p class="sensor-dots-item-description">
-              Coleta de vibração Triaxial e Temperatura
-            </p>
-          </div>
-          <div class="sensor-dots-item">
-            <h5 class="sensor-dots-item-title">4. Ímã Fixador</h5>
-            <p class="sensor-dots-item-description">
-              Super fácil fixação ou remoção
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-how-it-works container" id="how-it-works-content">
-      <h2 class="title">Como funciona</h2>
-      <img
-        src="src/assets/imagens/como-funciona.png"
-        alt="Como funciona"
-        class="how-it-works-image how-it-works-content-image-hide"
-        id="how-it-works-content-image"
-      />
-    </section>
-
-    <section class="section-monitoring section-technology" id="technology-content">
-      <div class="section-monitoring-content container">
-        <h2 class="title-light section-technology-title section-technology-title-hide" id="section-technology-title">
-          Tecnologia para sua empresa atingir melhores resultados
-        </h2>
-        <div class="monitoring-cards-wrapper technology-cards-wrapper technology-cards-wrapper-hide" id="technology-cards-wrapper">
-          <div class="monitoring-card">
-            <img
-              class="monitoring-card-image"
-              src="./src/assets/vetores_svg/icone_reducao_de_custos.svg"
-              alt="Ícone Redução de custos"
-            />
-            <h4 class="monitoring-card-title">Redução de custos</h4>
-            <p class="monitoring-card-description">
-              Reduza os custos de suas manutenções
-            </p>
-          </div>
-          <div class="monitoring-card">
-            <img
-              class="monitoring-card-image"
-              src="./src/assets/vetores_svg/icone_eficiencia.svg"
-              alt="Ícone eficiência"
-            />
-            <h4 class="monitoring-card-title">Eficiência</h4>
-            <p class="monitoring-card-description">
-              Aumente a sua eficiência produtiva
-            </p>
-          </div>
-          <div class="monitoring-card">
-            <img
-              class="monitoring-card-image"
-              src="./src/assets/vetores_svg/icone_concorrencia.svg"
-              alt="Ícone concorrência"
-            />
-            <h4 class="monitoring-card-title">Concorrência</h4>
-            <p class="monitoring-card-description">
-              Torne seu produto mais competitivo
-            </p>
-          </div>
-        </div>
-        <ul class="carousel-menu-list">
-          <li class="carousel-menu-item carousel-menu-item-active"></li>
-          <li class="carousel-menu-item"></li>
+      <div class="navbar">
+        <a class="header-logo" href="#">
+          <img src="./src/assets/vetores_svg/icone_tecnologia_avancada.svg" alt="iot-nest logo" />
+        </a>
+        <ul class="navbar-menu">
+          <li>
+            <a onclick="scrollToElement('sensor-content')">Produto</a>
+          </li>
+          <li>
+            <a onclick="scrollToElement('how-it-works-content')">Como Funciona</a>
+          </li>
+          <li>
+            <a onclick="scrollToElement('technology-content')">Vantagens</a>
+          </li>
+          <li>
+            <a onclick="scrollToElement('simulate-content')">Simule o plano</a>
+          </li>
         </ul>
+        <button class="navbar-button" onclick="scrollToElement('request-content')">Teste gratuito</button>
       </div>
-    </section>
+    </div>
+  </nav>
 
-    <section class="section-maintenance" id="section-maintenance">
-      <div class="maintenance-bg-white"></div>
-      <div class="section-maintenance-content container">
-        <h2 class="title-light section-maintenance-title section-maintenance-title-hide" id="section-maintenance-title">Manutenção preditiva de alto nível</h2>
-        <p class="description-light section-maintenance-description section-maintenance-description-hide" id="section-maintenance-description" style="margin-bottom: 60px;">
-          Nosso algorítmo aprende, analisa, sugere diagnóstico e alerta para
-          falhas em estágio inicial
+  <nav class="navbar-wrapper-fixed" id="navbar-fixed-wrapper">
+    <div class="container">
+      <div class="navbar-fixed" id="navbar">
+        <a class="header-logo-fixed" href="#">
+          <img src="./src/assets/vetores_svg/icone_tecnologia_avancada.svg" alt="iot-nest logo" />
+        </a>
+        <ul class="navbar-menu-fixed">
+          <li>
+            <a onclick="scrollToElement('sensor-content')">Produto</a>
+          </li>
+          <li>
+            <a onclick="scrollToElement('how-it-works-content')">Como Funciona</a>
+          </li>
+          <li>
+            <a onclick="scrollToElement('technology-content')">Vantagens</a>
+          </li>
+          <li>
+            <a onclick="scrollToElement('simulate-content')">Simule o plano</a>
+          </li>
+        </ul>
+        <button class="navbar-button-fixed" onclick="scrollToElement('request-content')">Teste gratuito</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <header class="header-section">
+      <div class="header-background-image">
+        <img src="./src/assets/vetores_svg/home_image.svg" alt="Máquinas" />
+      </div>
+      <h1 class="header-title">Sistema preditivo IoT Nest Sensor</h1>
+      <p class="header-description">
+        Tecnologia para o monitoramento do funcionamento de máquinas
+      </p>
+      <button class="header-button" onclick="scrollToElement('request-content')">Faça um teste gratuito</button>
+      <a class="header-button-help-text" onclick="scrollToElement('how-it-works-content')">Como funciona?</a>
+    </header>
+  </div>
+
+  <section class="section-monitoring">
+    <div class="section-monitoring-content monitoring-content-hide container" id="monitoring-content">
+      <!-- <div class="monitoring-bird-background monitoring-bird-1">
+        <img src="./src/assets/vetores_svg/path_bird.png" alt="Path Bird" />
+      </div>
+      <div class="monitoring-bird-background monitoring-bird-2">
+        <img src="./src/assets/vetores_svg/path_bird_2.png" alt="Path Bird" />
+      </div> -->
+      <h2 class="title-light" style="width: 800px">
+        Sistema para monitoramento do seu ativo
+      </h2>
+      <div class="monitoring-cards-wrapper">
+        <div class="monitoring-card">
+          <img class="monitoring-card-image" src="./src/assets/vetores_svg/icone_tecnologia_avancada.svg"
+            alt="Ícone Tecnologia avançada" />
+          <h4 class="monitoring-card-title">Tecnologia Avançada</h4>
+          <p class="monitoring-card-description">
+            Hardware robusto para Indústria, transmissão em longas distâncias
+            e Inteligência artificial
+          </p>
+        </div>
+        <div class="monitoring-card">
+          <img class="monitoring-card-image" src="./src/assets/vetores_svg/icone_praticidade.svg"
+            alt="Ícone praticidade" />
+          <h4 class="monitoring-card-title">Praticidade</h4>
+          <p class="monitoring-card-description">
+            Instalação rápida e sem fios<br />
+            Plug & Play com o seu celular<br />
+            Alertas e diagnósticos via Web
+          </p>
+        </div>
+        <div class="monitoring-card">
+          <img class="monitoring-card-image" src="./src/assets/vetores_svg/icone_baixo_custo.svg"
+            alt="Ícone baixo custo" />
+          <h4 class="monitoring-card-title">Baixo Custo</h4>
+          <p class="monitoring-card-description">
+            Sem custo de aquisição<br />
+            Sem limite mínimo de sensores<br />
+            Planos que cabem no seu bolso
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-sensor container" id="sensor-content">
+    <h2 class="title">Sensores robustos e confiáveis</h2>
+    <div class="sensor-content">
+      <div class="sensor-info sensor-info-hide" id="sensor-info">
+        <h5 class="sensor-info-title">IoT Nest Sensor</h5>
+
+        <p class="sensor-info-paragraph">
+          - Instalação dos sensores prática, rápida e sem fio
         </p>
-        <div class="maintenance-carousel-wrapper maintenance-carousel-wrapper-hide" id="maintenance-carousel-wrapper">
-          <ul class="carousel-menu-list">
-            <li class="carousel-menu-item carousel-menu-item-active"></li>
-            <li class="carousel-menu-item"></li>
-            <li class="carousel-menu-item"></li>
-            <li class="carousel-menu-item"></li>
-          </ul>
-          <div class="maintenance-carousel">
-            <div class="maintenance-carousel-desktop">
-              <img
-                src="src/assets/imagens/mockup-screen.png"
-                alt="mockup screen desktop"
-                class="maintenance-carousel-desktop-mockup"
-              />
-              <div class="maintenance-carousel-desktop-image-container">
-                <!-- Carousel -->
-                <img
-                  src="src/assets/imagens/tela4-desktop.jpg"
-                  alt="tela 1 desktop"
-                  class="maintenance-carousel-desktop-image"
-                />
+        <p class="sensor-info-paragraph">
+          - Desenvolvido para suportar ambientes industriais agressivos
+        </p>
+      </div>
+
+      <img class="sensor-image" src="src/assets/imagens/sensor.png" alt="sensor" />
+      <div class="sensor-dots-wrapper sensor-dots-wrapper-hide" id="sensor-dots-wrapper">
+        <div class="sensor-dots-item">
+          <h5 class="sensor-dots-item-title">1. Antena</h5>
+          <p class="sensor-dots-item-description">
+            Capacitado para transmissão em longas distâncias
+          </p>
+        </div>
+        <div class="sensor-dots-item">
+          <h5 class="sensor-dots-item-title">2. Bateria</h5>
+          <p class="sensor-dots-item-description">
+            Duração estimada de 3 anos
+          </p>
+        </div>
+        <div class="sensor-dots-item">
+          <h5 class="sensor-dots-item-title">3. Tecnologia IoT Nest</h5>
+          <p class="sensor-dots-item-description">
+            Coleta de vibração Triaxial e Temperatura
+          </p>
+        </div>
+        <div class="sensor-dots-item">
+          <h5 class="sensor-dots-item-title">4. Ímã Fixador</h5>
+          <p class="sensor-dots-item-description">
+            Super fácil fixação ou remoção
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-how-it-works container" id="how-it-works-content">
+    <h2 class="title">Como funciona</h2>
+    <img src="src/assets/imagens/como-funciona.png" alt="Como funciona"
+      class="how-it-works-image how-it-works-content-image-hide" id="how-it-works-content-image" />
+  </section>
+
+  <section class="section-monitoring section-technology" id="technology-content">
+    <div class="section-monitoring-content container">
+      <h2 class="title-light section-technology-title section-technology-title-hide" id="section-technology-title">
+        Tecnologia para sua empresa atingir melhores resultados
+      </h2>
+      <div class="technology-cards-wrapper technology-cards-wrapper-hide" id="technology-cards-wrapper">
+        <!-- Slider main container -->
+        <div class="swiper-container swiper-cards-container-hide" id="swiper-cards">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="monitoring-card">
+                <img class="monitoring-card-image" src="./src/assets/vetores_svg/icone_reducao_de_custos.svg"
+                  alt="Ícone Redução de custos" />
+                <h4 class="monitoring-card-title">Redução de custos</h4>
+                <p class="monitoring-card-description">
+                  Reduza os custos de suas manutenções
+                </p>
+              </div>
+              <div class="monitoring-card">
+                <img class="monitoring-card-image" src="./src/assets/vetores_svg/icone_eficiencia.svg"
+                  alt="Ícone eficiência" />
+                <h4 class="monitoring-card-title">Eficiência</h4>
+                <p class="monitoring-card-description">
+                  Aumente a sua eficiência produtiva
+                </p>
+              </div>
+              <div class="monitoring-card">
+                <img class="monitoring-card-image" src="./src/assets/vetores_svg/icone_concorrencia.svg"
+                  alt="Ícone concorrência" />
+                <h4 class="monitoring-card-title">Concorrência</h4>
+                <p class="monitoring-card-description">
+                  Torne seu produto mais competitivo
+                </p>
               </div>
             </div>
-            <div class="maintenance-carousel-mobile">
-              <img
-                src="src/assets/imagens/mockup-smartphone.png"
-                alt="mockup screen mobile"
-                class="maintenance-carousel-mobile-mockup"
-              />
-              <div class="maintenance-carousel-mobile-image-container">
-                <!-- Carousel -->
-                <img
-                  src="src/assets/imagens/tela-4-mobile.jpg"
-                  alt="tela 1 mobile"
-                  class="maintenance-carousel-mobile-image"
-                />
+            <div class="swiper-slide">
+              <div class="monitoring-card">
+                <img class="monitoring-card-image" src="./src/assets/vetores_svg/icone_reducao_de_custos.svg"
+                  alt="Ícone Redução de custos" />
+                <h4 class="monitoring-card-title">Redução de custos</h4>
+                <p class="monitoring-card-description">
+                  Reduza os custos de suas manutenções
+                </p>
+              </div>
+              <div class="monitoring-card">
+                <img class="monitoring-card-image" src="./src/assets/vetores_svg/icone_eficiencia.svg"
+                  alt="Ícone eficiência" />
+                <h4 class="monitoring-card-title">Eficiência</h4>
+                <p class="monitoring-card-description">
+                  Aumente a sua eficiência produtiva
+                </p>
+              </div>
+              <div class="monitoring-card">
+                <img class="monitoring-card-image" src="./src/assets/vetores_svg/icone_concorrencia.svg"
+                  alt="Ícone concorrência" />
+                <h4 class="monitoring-card-title">Concorrência</h4>
+                <p class="monitoring-card-description">
+                  Torne seu produto mais competitivo
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <!-- pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section-maintenance" id="section-maintenance">
+    <div class="maintenance-bg-white"></div>
+    <div class="section-maintenance-content container">
+      <h2 class="title-light section-maintenance-title section-maintenance-title-hide" id="section-maintenance-title">
+        Manutenção preditiva de alto nível</h2>
+      <p class="description-light section-maintenance-description section-maintenance-description-hide"
+        id="section-maintenance-description" style="margin-bottom: 60px;">
+        Nosso algorítmo aprende, analisa, sugere diagnóstico e alerta para
+        falhas em estágio inicial
+      </p>
+      <div class="maintenance-carousel-wrapper" id="maintenance-carousel-wrapper">
+        <div class="swiper-pagination-2"></div>
+        <div class="maintenance-carousel">
+          <div class="maintenance-carousel-desktop">
+            <img src="src/assets/imagens/mockup-screen.png" alt="mockup screen desktop"
+              class="maintenance-carousel-desktop-mockup" />
+            <div class="maintenance-carousel-desktop-image-container">
+              <!-- Carousel -->
+              <div class="swiper-container"
+                style="height: 100%; margin: 0px !important; padding: 0px !important; z-index: 0;" id="swiper-desktop">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide swiper-slide-2">
+                    <img src="src/assets/imagens/tela1-desktop.jpg" alt="tela-desktop-1"
+                      class="mintenance-slider-desktop-image">
+                  </div>
+                  <div class="swiper-slide swiper-slide-2">
+                    <img src="src/assets/imagens/tela2-desktop.jpg" alt="tela-desktop-2"
+                      class="mintenance-slider-desktop-image">
+                  </div>
+                  <div class="swiper-slide swiper-slide-2">
+                    <img src="src/assets/imagens/tela3-desktop.jpg" alt="tela-desktop-3"
+                      class="mintenance-slider-desktop-image">
+                  </div>
+                  <div class="swiper-slide swiper-slide-2">
+                    <img src="src/assets/imagens/tela4-desktop.jpg" alt="tela-desktop-4"
+                      class="mintenance-slider-desktop-image">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="maintenance-carousel-mobile">
+            <img src="src/assets/imagens/mockup-smartphone.png" alt="mockup screen mobile"
+              class="maintenance-carousel-mobile-mockup" />
+            <div class="maintenance-carousel-mobile-image-container">
+              <!-- Carousel -->
+              <div class="swiper-container"
+                style="height: 100%; margin: 0px !important; padding: 0px !important; z-index: 0;" id="swiper-mobile">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide swiper-slide-2">
+                    <img src="src/assets/imagens/tela-1-mobile.jpg" alt="tela-mobile-1"
+                      class="mintenance-slider-mobile-image">
+                  </div>
+                  <div class="swiper-slide swiper-slide-2">
+                    <img src="src/assets/imagens/tela-2-mobile.jpg" alt="tela-mobile-2"
+                      class="mintenance-slider-mobile-image">
+                  </div>
+                  <div class="swiper-slide swiper-slide-2">
+                    <img src="src/assets/imagens/tela-3-mobile.jpg" alt="tela-mobile-3"
+                      class="mintenance-slider-mobile-image">
+                  </div>
+                  <div class="swiper-slide swiper-slide-2">
+                    <img src="src/assets/imagens/tela-4-mobile.jpg" alt="tela-mobile-4"
+                      class="mintenance-slider-mobile-image">
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section-simulate container" id="simulate-content">
-      <h2 class="title">Simule o plano que cabe no seu bolso</h2>
-      <p class="description" style="max-width: 700px;">
-        Escolha a quantidade de sensores e o tempo de contrato que lhe daremos o valor mensal a ser investido
-      </p>
-      <div>
-        <form class="simulate-calculator-wrapper">
+  <section class="section-simulate container" id="simulate-content">
+    <h2 class="title">Simule o plano que cabe no seu bolso</h2>
+    <p class="description" style="max-width: 700px;">
+      Escolha a quantidade de sensores e o tempo de contrato que lhe daremos o valor mensal a ser investido
+    </p>
+    <div>
+      <form class="simulate-calculator-wrapper">
         <div class="simulate-calculator-input">
           <p class="simulate-calculator-input-label">Quantidade de sensores</p>
-          <input type="text" name="qtdSensores" class="simulate-calculator-input-text" placeholder="100" maxlength="10" />
+          <input type="text" name="qtdSensores" class="simulate-calculator-input-text" placeholder="100" maxlength="10"
+            id="contract-qtd-sensors" oninput="calculatePlan()" />
         </div>
         <span class="simulate-calculator-sign" style="line-height: .9;">+</span>
         <div class="simulate-calculator-input">
           <p class="simulate-calculator-input-label">Tempo de Contrato</p>
           <div style="display: flex; justify-content: space-between;">
-            <div class="simulate-calculator-input-radio simulate-calculator-input-radio-selected" id="radio12">12</div>
-            <div class="simulate-calculator-input-radio" id="radio12">24</div>
-            <div class="simulate-calculator-input-radio" id="radio12">36</div>
+            <div class="simulate-calculator-input-radio simulate-calculator-input-radio-selected" id="contract-time-12"
+              onclick="setContractTime('contract-time-12')">12</div>
+            <div class="simulate-calculator-input-radio" id="contract-time-24"
+              onclick="setContractTime('contract-time-24')">24</div>
+            <div class="simulate-calculator-input-radio" id="contract-time-36"
+              onclick="setContractTime('contract-time-36')">36</div>
           </div>
         </div>
         <span class="simulate-calculator-sign" style="line-height: 1;">=</span>
         <div class="simulate-calculator-input">
           <p class="simulate-calculator-input-label">Valor Mensal</p>
-          <input type="text" name="qtdSensores" class="simulate-calculator-input-text" disabled />
+          <input type="text" name="qtdSensores" class="simulate-calculator-input-text" disabled
+            id="contract-montly-value" />
         </div>
       </form>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section-request container" id="request-content">
-      <h2 class="title">Solicite um teste gratuito</h2>
-      <p class="description" style="max-width: 740px;">
-        Enviamos o equipamento até você. E para testar é muito simples, só precisa de um smartphone e alguns minutos para instalar
+  <section class="section-request container" id="request-content">
+    <h2 class="title">Solicite um teste gratuito</h2>
+    <p class="description" style="max-width: 740px;">
+      Enviamos o equipamento até você. E para testar é muito simples, só precisa de um smartphone e alguns minutos para
+      instalar
+    </p>
+    <div class="request-cards-wrapper">
+      <div class="request-card">
+        <div class="request-card-image-wrapper">
+          <img src="./src/assets/vetores_svg/icone_passo1.svg" alt="Ícone passo 1" class="request-card-image">
+        </div>
+        <h5 class="request-card-title">Passo 1</h5>
+        <p class="request-card-description">Fixar o sensor no ativo</p>
+      </div>
+      <div class="request-card">
+        <div class="request-card-image-wrapper">
+          <img src="./src/assets/vetores_svg/icone_passo2.svg" alt="Ícone passo 2" class="request-card-image">
+        </div>
+        <h5 class="request-card-title">Passo 2</h5>
+        <p class="request-card-description">Fazer a leitura do QR code com seu smartphone</p>
+      </div>
+      <div class="request-card">
+        <div class="request-card-image-wrapper">
+          <img src="./src/assets/vetores_svg/icone_passo3.svg" alt="Ícone passo 3" class="request-card-image"
+            style="margin-right: -30px;">
+        </div>
+        <h5 class="request-card-title">Passo 3</h5>
+        <p class="request-card-description" style="max-width: 220px;">Personalizar seu sensor e pronto!</p>
+      </div>
+    </div>
+    <button class="header-button">Solicite um teste gratuito</button>
+  </section>
+
+  <section class="section-contact">
+    <div class="section-contact-content container">
+      <h2 class="title-light">Entre em contato</h2>
+      <p class="description-light">
+        Converse com um de nossos especialistas
       </p>
-      <div class="request-cards-wrapper">
-        <div class="request-card">
-          <div class="request-card-image-wrapper">
-            <img src="./src/assets/vetores_svg/icone_passo1.svg" alt="Ícone passo 1" class="request-card-image">
-          </div>
-          <h5 class="request-card-title">Passo 1</h5>
-          <p class="request-card-description">Fixar o sensor no ativo</p>
+      <form class="contact-form" method="POST">
+        <input type="text" name="nome" class="contact-input-text-input" placeholder="Nome"
+          style="margin-right: 15px;" />
+        <input type="email" name="mail" class="contact-input-text-input" placeholder="E-mail"
+          style="margin-left: 15px" />
+        <textarea name="mensagem" class="contact-input-textarea" cols="4" rows="4"
+          placeholder="Digite sua mensagem aqui..."></textarea>
+        <button type="submit" class="header-button" style="padding: 20px 90px; margin-top: 20px;">Enviar</button>
+      </form>
+      <div class="contact-info-wrapper">
+        <div class="contact-info">
+          <p class="contact-info-p">
+            contato@qoobo.com.br
+          </p>
         </div>
-        <div class="request-card">
-          <div class="request-card-image-wrapper">
-            <img src="./src/assets/vetores_svg/icone_passo2.svg" alt="Ícone passo 2" class="request-card-image">
-          </div>
-          <h5 class="request-card-title">Passo 2</h5>
-          <p class="request-card-description">Fazer a leitura do QR code com seu smartphone</p>
+        <div class="contact-info">
+          <p class="contact-info-p">
+            (11) 44497-0262
+          </p>
         </div>
-        <div class="request-card">
-          <div class="request-card-image-wrapper">
-            <img src="./src/assets/vetores_svg/icone_passo3.svg" alt="Ícone passo 3" class="request-card-image" style="margin-right: -30px;">
-          </div>
-          <h5 class="request-card-title">Passo 3</h5>
-          <p class="request-card-description" style="max-width: 220px;">Personalizar seu sensor e pronto!</p>
-        </div>
-      </div>
-      <button class="header-button">Solicite um teste gratuito</button>
-    </section>
-
-    <section class="section-contact">
-      <div class="section-contact-content container">
-        <h2 class="title-light">Entre em contato</h2>
-        <p class="description-light">
-          Converse com um de nossos especialistas
-        </p>
-        <form class="contact-form" method="POST">
-          <input type="text" name="nome" class="contact-input-text-input" placeholder="Nome" style="margin-right: 15px;" />
-          <input type="email" name="mail" class="contact-input-text-input" placeholder="E-mail" style="margin-left: 15px" />
-          <textarea name="mensagem" class="contact-input-textarea" cols="4" rows="4" placeholder="Digite sua mensagem aqui..."></textarea>
-          <button type="submit" class="header-button" style="padding: 20px 90px; margin-top: 20px;">Enviar</button>
-        </form>
-        <div class="contact-info-wrapper">
-          <div class="contact-info">
-            <p class="contact-info-p">
-              contato@qoobo.com.br
-            </p>
-          </div>
-          <div class="contact-info">
-            <p class="contact-info-p">
-              (11) 44497-0262
-            </p>
-          </div>
-          <div class="contact-info">
-            <p class="contact-info-p">
-              R. Cap. Cassiano Ricardo de Toledo, 191 - Chácara Urbana, Jundiaí - SP, 13201-840 Sala 1205
-            </p>
-          </div>
+        <div class="contact-info">
+          <p class="contact-info-p">
+            R. Cap. Cassiano Ricardo de Toledo, 191 - Chácara Urbana, Jundiaí - SP, 13201-840 Sala 1205
+          </p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer>IoT Nest Sensor - 2021</footer>
+  <footer>IoT Nest Sensor - 2021</footer>
 
-    <script src="./index.js"></script>
-  </body>
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="./index.js"></script>
+  <script src="./swiper.js"></script>
+</body>
+
 </html>
