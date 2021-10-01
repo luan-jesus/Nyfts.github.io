@@ -1,9 +1,3 @@
 - Atualizar do Logo correto
 - Atualizar formula correta para calculo plano
 - Avaliar funcionalidade de enviar email
-- Validar SEO
-- Validar desempenho
-  - alterar formato das imagens pra algo mais leve
-- Ver site na tela do notebook
-  - ajustar navbar para tela 1280x720
-- Ver site na tela do celular

@@ -9,6 +9,30 @@ window.onscroll = function () {
       .classList.remove("navbar-wrapper-fixed-on")
   }
 
+  showElements()
+};
+
+window.onload = function () {
+  if (deviceType() == 'mobile') {
+    document.getElementById("monitoring-title").classList.remove("monitoring-content-hide")
+    document.getElementById("monitoring-cards-wrapper").classList.remove("monitoring-content-hide")
+    document.getElementById("sensor-info").classList.remove("sensor-info-hide")
+    document.getElementById("sensor-dots-wrapper").classList.remove("sensor-dots-wrapper-hide")
+    document.getElementById("how-it-works-content-image").classList.remove("how-it-works-content-image-hide")
+    document.getElementById("section-technology-title").classList.remove("section-technology-title-hide")
+    document.getElementById("technology-cards-wrapper").classList.remove("technology-cards-wrapper-hide")
+    document.getElementById("section-maintenance-title").classList.remove("section-maintenance-title-hide")
+    document.getElementById("section-maintenance-description").classList.remove("section-maintenance-description-hide")
+    document.getElementById("section-maintenance-content").classList.remove("section-maintenance-content-hide")
+    document.getElementById("simulate-calculator-wrapper").classList.remove("simulate-calculator-wrapper-hide")
+    document.getElementById("request-cards-wrapper").classList.remove("request-cards-wrapper-hide")
+    document.getElementById("request-cards-wrapper-button").classList.remove("request-cards-wrapper-hide")
+  } else {
+    showElements()
+  }
+}
+
+function showElements() {
   showElement({elementIsVisible: "monitoring-content", elementId: "monitoring-title", classToRemove: "monitoring-content-hide"})
   showElement({elementIsVisible: "monitoring-content", elementId: "monitoring-cards-wrapper", classToRemove: "monitoring-content-hide"})
 
@@ -31,24 +55,6 @@ window.onscroll = function () {
   showElement({elementIsVisible: "request-content", elementId: "request-cards-wrapper-button", classToRemove: "request-cards-wrapper-hide"})
 
   showElement({elementIsVisible: "section-contact", elementId: "section-contact-content", classToRemove: "section-contact-content-hide"})
-};
-
-window.onload = function () {
-  if (deviceType() == 'mobile') {
-    document.getElementById("monitoring-title").classList.remove("monitoring-content-hide")
-    document.getElementById("monitoring-cards-wrapper").classList.remove("monitoring-content-hide")
-    document.getElementById("sensor-info").classList.remove("sensor-info-hide")
-    document.getElementById("sensor-dots-wrapper").classList.remove("sensor-dots-wrapper-hide")
-    document.getElementById("how-it-works-content-image").classList.remove("how-it-works-content-image-hide")
-    document.getElementById("section-technology-title").classList.remove("section-technology-title-hide")
-    document.getElementById("technology-cards-wrapper").classList.remove("technology-cards-wrapper-hide")
-    document.getElementById("section-maintenance-title").classList.remove("section-maintenance-title-hide")
-    document.getElementById("section-maintenance-description").classList.remove("section-maintenance-description-hide")
-    document.getElementById("section-maintenance-content").classList.remove("section-maintenance-content-hide")
-    document.getElementById("simulate-calculator-wrapper").classList.remove("simulate-calculator-wrapper-hide")
-    document.getElementById("request-cards-wrapper").classList.remove("request-cards-wrapper-hide")
-    document.getElementById("request-cards-wrapper-button").classList.remove("request-cards-wrapper-hide")
-  }
 }
 
 function isElementVisible(elementId) {
@@ -146,3 +152,15 @@ const deviceType = () => {
   }
   return "desktop";
 };
+
+document.getElementById("contact-form").addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const nome = document.getElementById("contact-form-nome").value
+  const email = document.getElementById("contact-form-email").value
+  const mensagem = document.getElementById("contact-form-mensagem").value
+
+  if (nome && email) {
+    alert(`Mensagem enviada com sucesso!`)
+  }
+})
