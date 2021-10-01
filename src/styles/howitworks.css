@@ -10,11 +10,20 @@
   width: 90%;
   margin-bottom: 80px;
   margin-top: 90px;
+  margin-right: -20px;
   opacity: 1;
   transition: 2s ease opacity;
   position: relative;
+  user-select: none;
 }
 
 .how-it-works-content-image-hide {
   opacity: 0;
+}
+
+/* Mobile */
+@media screen and (max-width: 992px) {
+  .how-it-works-image {
+    width: 100%;
+  }
 }

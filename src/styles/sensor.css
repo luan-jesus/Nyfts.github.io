@@ -55,8 +55,8 @@
 }
 
 .sensor-image {
+  user-select: none;
   width: 300px;
-  transform: scaleX(-1);
   margin: 0 100px;
 }
 
@@ -91,4 +91,29 @@
   margin: 10px 0 0 0;
   max-width: 280px;
   font-weight: 400;
+}
+
+/* Mobile */
+@media screen and (max-width: 992px) {
+  .section-sensor {
+    padding: 40px 0 !important;
+  }
+
+  .sensor-content {
+    flex-direction: column;
+  }
+
+  .sensor-info {
+    margin-top: 60px;
+    z-index: 1;
+  }
+
+  .sensor-dots-wrapper {
+    display: none;
+  }
+
+  .sensor-image {
+    margin: 0;
+    width: 70%;
+  }
 }

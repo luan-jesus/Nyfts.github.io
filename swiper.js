@@ -5,6 +5,13 @@ const swiperCards = new Swiper(document.getElementById("swiper-cards"), {
     loop: true,
 });
 
+const swiperCardsMobile = new Swiper(document.getElementById("swiper-cards-mobile"), {
+    pagination: {
+        el: '.swiper-pagination-mobile',
+    },
+    loop: true,
+});
+
 const swiperDesktop = new Swiper(document.getElementById("swiper-desktop"), {
     pagination: {
         el: '.swiper-pagination-2',

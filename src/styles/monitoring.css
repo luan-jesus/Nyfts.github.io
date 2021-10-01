@@ -18,8 +18,8 @@
 
 .monitoring-content-hide {
   position: relative;
-  right: -300px;
-  opacity: 0;
+  margin-right: -300px !important;
+  opacity: 0 !important;
 }
 
 .monitoring-cards-wrapper {
@@ -27,6 +27,10 @@
   margin: 80px 0;
   justify-content: space-between;
   width: 80%;
+
+  transition: 1.5s ease-out opacity, 1s ease-out margin-right;
+  margin-right: 0px;
+  opacity: 1;
 }
 
 .monitoring-card {
@@ -36,11 +40,12 @@
   padding: 30px 15px 20px;
   display: flex;
   flex-direction: column;
+  box-sizing: content-box;
   justify-content: center;
   height: 290px;
   border-radius: 15px;
   align-items: center;
-  box-shadow: 3px 3px 25px #00000029;
+  box-shadow: 3px 3px 10px #00000029;
   z-index: 1;
 }
 
@@ -70,6 +75,7 @@
 }
 
 .monitoring-bird-background img {
+  user-select: none;
   height: auto;
   width: 100%;
 }
@@ -81,8 +87,51 @@
 }
 
 .monitoring-bird-2 {
-  top: 10px;
+  top: 0;
   width: 300px;
   left: -200px;
-  transform: rotate(290deg);
+}
+
+.monitoring-bird-3 {
+  width: 40px;
+  bottom: 30%;
+  left: -10px;
+}
+
+/* Mobile */
+@media screen and (max-width: 992px) {
+  .monitoring-cards-wrapper {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+  }
+
+  .monitoring-card {
+    width: 100%;
+    margin: 0 0 20px;
+  }
+
+  .monitoring-bird-background img {
+    width: 60%;
+  }
+
+  .section-monitoring {
+    padding: 40px 0;
+  }
+
+  .monitoring-bird-1 {
+    display: none;
+  }
+  
+  .monitoring-bird-2 {
+    top: -70px;
+    width: 300px;
+    left: -100px;
+  }
+  
+  .monitoring-bird-3 {
+    left: 0;
+  }
 }

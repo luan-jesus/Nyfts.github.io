@@ -12,6 +12,8 @@
   position: relative;
   padding-bottom: 120px;
   padding-top: 120px;
+  opacity: 1;
+  transition: .1s all linear;
 }
 
 .contact-form {
@@ -71,4 +73,88 @@
   color: #fff;
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
+}
+
+.section-contact-content-hide {
+  opacity: .1;
+}
+
+.contact-bird-background {
+  position: absolute;
+}
+
+.contact-bird-background img {
+  user-select: none;
+  height: auto;
+  width: 50%;
+}
+
+.contact-bird-1 {
+  bottom: 0;
+  left: 150px;
+}
+
+.contact-bird-2 {
+  top: 0;
+  right: -350px;
+}
+
+.contact-bird-3 {
+  top: 200px;
+  left: 300px;
+}
+
+/* Mobile */
+@media screen and (max-width: 992px) {
+  .section-contact-content {
+    padding: 40px 0 !important;
+  }
+
+  .contact-form {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .contact-input-text-input {
+    margin: 10px 0 !important;
+    width: 100%;
+  }
+
+  .contact-input-textarea {
+    margin: 10px 0 0 !important;
+    width: 100%;
+  }
+
+  .contact-info-wrapper {
+    flex-direction: column;
+    margin-top: 60px;
+  }
+
+  .contact-info {
+    max-width: 100%;
+  }
+
+  .contact-info-p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .contact-bird-background img {
+    width: 35%;
+  }
+
+  .contact-bird-1 {
+    bottom: 0;
+    left: -90px;
+  }
+  
+  .contact-bird-2 {
+    display: none;
+  }
+  
+  .contact-bird-3 {
+    top: 100px;
+    left: 300px;
+  }
 }

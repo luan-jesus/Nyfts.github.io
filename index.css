@@ -11,9 +11,25 @@
 @import url("./src/styles/request.css");
 @import url("./src/styles/contact.css");
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 .container {
   margin: 0 auto;
   width: 1300px;
+}
+
+/* Mobile */
+@media screen and (max-width: 992px) {
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
 }
 
 .carousel-menu-list {
@@ -64,6 +80,10 @@
   font-weight: 700;
   text-align: center;
   z-index: 1;
+
+  transition: 1.5s ease-out opacity, 1s ease-out margin-right;
+  margin-right: 0px;
+  opacity: 1;
 }
 
 .description {
@@ -98,9 +118,11 @@ footer {
 }
 
 .swiper-container {
+  border-radius: 10px !important;
   width: 100% !important;
   padding: 80px 0 !important;
   margin: 20px 0;
+  overflow: hidden;
 }
 
 .swiper-container-2 {
@@ -139,4 +161,22 @@ footer {
 
 .swiper-pagination-bullet-active {
   background-color: #fff !important;
+}
+
+/* Mobile */
+@media screen and (max-width: 992px) {
+  * {
+    transition: none;
+  }
+
+  .title, .title-light {
+    font-size: 36px;
+    max-width: 100% !important;
+  }
+
+  .description, .description-light {
+    font-size: 20px;
+    max-width: 100% !important;
+    margin: 40px 0;
+  }
 }

@@ -1,0 +1,7 @@
+- Atualizar do Logo correto
+- Atualizar formula correta para calculo plano
+- Avaliar funcionalidade de enviar email
+- Validar SEO
+- Validar desempenho
+- Ver site na tela do notebook
+- Ver site na tela do celular

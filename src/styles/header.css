@@ -12,6 +12,7 @@
   width: 75%;
   bottom: 0;
   z-index: -1;
+  user-select: none;
 }
 
 .header-title {
@@ -43,6 +44,10 @@
   border-radius: 7px;
   color: #595979;
   margin-bottom: 20px;
+  
+  margin-left: 0px;
+  opacity: 1;
+  transition: 2s ease opacity, 1.5s ease-out margin-left;
 }
 
 .header-button:hover {
@@ -64,4 +69,26 @@
 .header-button-help-text:hover {
   color: #000;
   cursor: pointer;
+}
+
+/* Mobile */
+@media screen and (max-width: 992px) {
+  .header-background-image {
+    width: 100%;
+    position: relative;
+    margin: 0 0 60px;
+  }
+
+  .header-title {
+    font-size: 36px;
+    max-width: 100%;
+    margin-top: 150px;
+    margin-bottom: 50px;
+  }
+
+  .header-description {
+    font-size: 20px;
+    max-width: 100%;
+    margin-bottom: 60px;
+  }
 }

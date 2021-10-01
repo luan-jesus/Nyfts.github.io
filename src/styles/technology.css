@@ -40,3 +40,36 @@
   left: -200px;
   opacity: .1;
 }
+
+
+.swiper-pagination-mobile {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+
+/* Mobile */
+@media screen and (max-width: 992px) {
+  .monitoring-card {
+    margin: 5px;
+  }
+
+  .swiper-container-desktop {
+    display: none !important;
+  }
+
+  .section-technology {
+    padding-bottom: 0;
+  }
+}
+
+/* Mobile */
+@media screen and (min-width: 992px) {
+  .swiper-container-mobile {
+    display: none !important;
+  }
+}
+
