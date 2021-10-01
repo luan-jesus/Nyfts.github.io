@@ -2,6 +2,7 @@
   width: 100%;
   background-color: #3396ff;
   z-index: 1;
+  overflow-x: hidden;
   position: relative;
 }
 

@@ -1,4 +1,5 @@
 .section-contact {
+  overflow-x: hidden;
   width: 100%;
   background-color: #3396ff;
   z-index: 1;
