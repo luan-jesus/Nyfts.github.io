@@ -9,7 +9,6 @@ window.onscroll = function () {
       .classList.remove("navbar-wrapper-fixed-on")
   }
 
-  // showElement({elementIsVisible: "monitoring-content", elementId: "monitoring-content", classToRemove: "monitoring-content-hide"})
   showElement({elementIsVisible: "monitoring-content", elementId: "monitoring-title", classToRemove: "monitoring-content-hide"})
   showElement({elementIsVisible: "monitoring-content", elementId: "monitoring-cards-wrapper", classToRemove: "monitoring-content-hide"})
 
@@ -36,7 +35,8 @@ window.onscroll = function () {
 
 window.onload = function () {
   if (deviceType() == 'mobile') {
-    document.getElementById("monitoring-content").classList.remove("monitoring-content-hide")
+    document.getElementById("monitoring-title").classList.remove("monitoring-content-hide")
+    document.getElementById("monitoring-cards-wrapper").classList.remove("monitoring-content-hide")
     document.getElementById("sensor-info").classList.remove("sensor-info-hide")
     document.getElementById("sensor-dots-wrapper").classList.remove("sensor-dots-wrapper-hide")
     document.getElementById("how-it-works-content-image").classList.remove("how-it-works-content-image-hide")
